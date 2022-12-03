@@ -10,7 +10,7 @@ This year's Raitenhaslach trip was a blast!
 
 ![](/assets/images/content-2022/raitenhaslach-1.jpg)
 
-We gathered with our new and old members at Raitenhaslach for a combination of productive working sessions and quality time with the team. We had delicious meals, fun games and a night walk around the Burghausen castle, which is the largest castle in the world. 
+We gathered with our new and old members at Raitenhaslach for a combination of productive working sessions and quality time with the team. We had delicious meals, fun games and a night walk around the Burghausen castle, which is the longest castle in the world. 
 
 The trip was a significant experience for us as a group since it helped to integrate the new members into the team and enhance the feeling of belonging to the community. 
 
