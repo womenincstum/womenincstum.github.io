@@ -1,0 +1,28 @@
+{% if include.id %}
+  {% assign member_row = page[include.id] %}
+{% else %}
+  {% assign member_row = page.member_row %}
+{% endif %}
+
+
+<div>
+    <div class="member_table">
+        {% for m in member_row %}
+            <div class="member_item">
+                {% if m.image_path %}
+                    <img src="{{ m.image_path }}" alt="" style="width: 200px;">
+                {% else %}
+                    <img src="../assets/images/IFF-logo-oval.png" alt="" style="width: 200px;">
+                {% endif %}
+                <div style="width: 100%; margin-top: 20px;">
+                    <p>
+                        {{ m.name }}<br/>
+                        {% if m.title %}
+                            <b style="font-size:15px">{{ m.title }}</b>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
