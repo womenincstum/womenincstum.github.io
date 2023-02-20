@@ -90,6 +90,7 @@ alumni:
 ## Organizational Structure
 
 * [General Team Leads](#general-team-leads)
+* [Professors](#professors)
 * [Sub-teams](#sub-teams)
     * [Social Media Team](#social-media-team)
     * [Public Relations Team](#public-relations-team)
