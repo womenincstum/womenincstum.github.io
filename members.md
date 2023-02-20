@@ -80,6 +80,10 @@ community-team:
       title: "Team Lead"
       image_path: "../assets/images/members/lena.jpeg"
 
+student-assistant:
+    - name: "Olga Rodzik"
+      image_path: "../assets/images/members/olga.jpeg"
+
 alumni:
     - name: "Ana Petrovska"
       title: "General Team Lead, 2015-2022"
@@ -131,6 +135,10 @@ alumni:
 ### Community and Creativity Team
 
 {% include member_row id="community-team" type="center" %}
+
+### Student Assistant 
+
+{% include member_row id="student-assistant" type="center" %}
 
 ## Alumni
 
