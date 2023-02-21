@@ -56,6 +56,7 @@ events-team:
       image_path: "../assets/images/members/hanya.jpeg"
     - name: "Shaghayegh Kolli"
       title: "IFF Officer"
+      image_path: "../assets/images/members/shaghayegh.jpeg"
     - name: "Chiara Laurenza"
       title: "IFF Officer"
     - name: "Taiba Basit"
