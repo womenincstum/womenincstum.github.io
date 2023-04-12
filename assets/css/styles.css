@@ -1,0 +1,24 @@
+/* IFF Members page */
+.member_table {
+    width: 100%; 
+    display: table;
+}
+
+.member_item {
+    float: left; 
+    width: 30%; 
+    height: 350px; 
+    text-align: center; 
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: rgb(210, 210, 210); 
+    border-radius: 10px; 
+    margin: 5px; 
+    padding: 10px;
+}
+
+.member_item img {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) { .member_item { height: 250px; } }
