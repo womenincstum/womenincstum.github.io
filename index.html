@@ -14,13 +14,21 @@ intro:
 
 # next-event:
 
-# upcoming:
-#     - title: "Women in Academia"
-#       excerpt: "Date & Time: TBA"
-#     - title: "Yoga Event"
-#       excerpt: "Date & Time: TBA"
+upcoming:
+    - title: "Bloomberg Event"
+      excerpt: "Date & Time: TBA"
+    - title: "Yoga Event"
+      excerpt: "Date & Time: TBA"
 
 past-event:
+
+  - image_path: assets/images/content-2023/recruiting-event.jpg
+    title: "Recent Event: Recruiting Event"
+    excerpt: "We are searching for motivated and reliable people who care about making TUM's CIT department more welcoming and accepting for everyone!"
+    url: https://forms.gle/LjMH7UM5ZEccjQZm6
+    btn_label: "Apply Here"
+    btn_class: "btn--primary"
+
   - image_path: assets/images/content-2023/python-best-practices.jpg
     title: "Recent Event: Python Best Practices"
     excerpt: "What are the best practices in Python today? In this event, our speaker from Bloomberg will share tips on software development."
@@ -40,6 +48,6 @@ past-event:
 
 <!-- {% include feature_row id="next-event" type="center" %} -->
 
-<!-- {% include feature_row id="upcoming" type="center" %} -->
+{% include feature_row id="upcoming" type="center" %}
 
 {% include feature_row id="past-event" type="center" %}
