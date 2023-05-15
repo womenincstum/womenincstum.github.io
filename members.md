@@ -2,6 +2,7 @@
 layout: single
 title: IFF Organization
 permalink: /members/
+semester: Summer Semester 2023
 
 general-team-leads:
     - name: "Joy Chaeeun Lee"
@@ -18,42 +19,31 @@ social-media-team:
     - name: "Anastasiya Damaratskaya"
       title: "Team Lead"
       image_path: "../assets/images/members/anastasiya.jpeg"
-    - name: "Liana Soima"
-      title: "Team Lead"
-      image_path: "../assets/images/members/liana.jpeg"
-    - name: "Derin Amal"
-      title: "IFF Officer"
-      image_path: "../assets/images/members/derin.jpeg"
-    - name: "Idil Sülo"
-      title: "IFF Officer"
-      image_path: "../assets/images/members/idil.jpeg"
-    - name: "Iva Lilova"
-      title: "IFF Officer"
-      image_path: "../assets/images/members/iva.jpeg"
+    
     - name: "Min Ting Luong"
       title: "IFF Officer"
       image_path: "../assets/images/members/min.jpeg"
-    - name: "Nahid Amiri"
-      title: "IFF Officer"
+    # - name: "Nahid Amiri"
+    #   title: "IFF Officer"
 
 pr-team:
     - name: "Irina Muntean"
       title: "Team Lead"
       image_path: "../assets/images/members/irina.jpeg"
-    - name: "Pauline Jakob"
-      title: "IFF Officer"
-      image_path: "../assets/images/members/pauline.jpeg"
     - name: "Veronika Bauer"
       title: "IFF Officer"
       image_path: "../assets/images/members/veronika.jpeg"
 
 events-team:
-    - name: "Daria Tarasova"
+    - name: "Idil Sülo"
       title: "Team Lead"
-      image_path: "../assets/images/members/dasha.jpeg"
-    - name: "Hanya Elhashemy"
+      image_path: "../assets/images/members/idil.jpeg"
+    - name: "Derin Amal"
+      title: "Team Lead"
+      image_path: "../assets/images/members/derin.jpeg"
+    - name: "Daria Tarasova"
       title: "IFF Officer"
-      image_path: "../assets/images/members/hanya.jpeg"
+      image_path: "../assets/images/members/dasha.jpeg"
     - name: "Shaghayegh Kolli"
       title: "IFF Officer"
       image_path: "../assets/images/members/shaghayegh.jpeg"
@@ -65,15 +55,18 @@ events-team:
 finance-team:
     - name: "Stefanie Mohr"
       title: "Team Lead"
+    - name: "Pauline Jakob"
+      title: "IFF Officer"
+      image_path: "../assets/images/members/pauline.jpeg"
     - name: "Balkiss Nouri"
       title: "IFF Officer"
       image_path: "../assets/images/members/balkiss.jpeg"
-    - name: "Carmen Brendt"
-      title: "IFF Officer"
-      image_path: "../assets/images/members/carmen.jpeg"
-    - name: "Zeenat Farheen"
-      title: "IFF Officer"
-      image_path: "../assets/images/members/zeenat.jpeg"
+    # - name: "Carmen Brendt"
+    #   title: "IFF Officer"
+    #   image_path: "../assets/images/members/carmen.jpeg"
+    # - name: "Zeenat Farheen"
+    #   title: "IFF Officer"
+    #   image_path: "../assets/images/members/zeenat.jpeg"
     
 
 community-team:
@@ -89,6 +82,15 @@ alumni:
     - name: "Ana Petrovska"
       title: "General Team Lead, 2015-2022"
       image_path: "../assets/images/members/ana.jpeg"
+    - name: "Hanya Elhashemy"
+      title: "Events Team Lead, 2021-2022"
+      image_path: "../assets/images/members/hanya.jpeg"
+    - name: "Liana Soima"
+      title: "Social Media Team Lead, 2021-2022"
+      image_path: "../assets/images/members/liana.jpeg"
+    - name: "Iva Lilova"
+      title: "IFF Officer, 2022-2023"
+      image_path: "../assets/images/members/iva.jpeg"
 
 ---
 
