@@ -162,7 +162,9 @@ footer:
     - label: "Discord"
       icon: "fab fa-discord"
       url: https://discord.com/invite/G7Ru7YdBsc
-
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:womenincsattum@gmail.com"
 
 # Reading Files
 include:
