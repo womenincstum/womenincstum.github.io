@@ -71,6 +71,8 @@ alumni:
     - name: "Ana Petrovska"
       title: "General Team Lead, 2015-2022"
       image_path: "../assets/images/members/ana.jpeg"
+    - name: "Prof. Anne Brüggemann-Klein"
+      title: "Responsible Faculty, 2015-2020"
     - name: "Hanya Elhashemy"
       title: "Events Team Lead, 2021-2022"
       image_path: "../assets/images/members/hanya.jpeg"
