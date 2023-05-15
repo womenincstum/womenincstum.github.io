@@ -13,18 +13,14 @@ general-team-leads:
 
 professors:
     - name: "Prof. Dr. Jana Giceva"
-    - name: "Prof. Dr. Debaghya Ghoshdastidar"
 
 social-media-team:
     - name: "Anastasiya Damaratskaya"
       title: "Team Lead"
       image_path: "../assets/images/members/anastasiya.jpeg"
-    
     - name: "Min Ting Luong"
       title: "IFF Officer"
       image_path: "../assets/images/members/min.jpeg"
-    # - name: "Nahid Amiri"
-    #   title: "IFF Officer"
 
 pr-team:
     - name: "Irina Muntean"
@@ -53,7 +49,7 @@ events-team:
       title: "IFF Officer"
 
 finance-team:
-    - name: "Stefanie Mohr"
+    - name: "Prof. Dr. Debarghya Ghoshdastidar"
       title: "Team Lead"
     - name: "Pauline Jakob"
       title: "IFF Officer"
@@ -61,13 +57,6 @@ finance-team:
     - name: "Balkiss Nouri"
       title: "IFF Officer"
       image_path: "../assets/images/members/balkiss.jpeg"
-    # - name: "Carmen Brendt"
-    #   title: "IFF Officer"
-    #   image_path: "../assets/images/members/carmen.jpeg"
-    # - name: "Zeenat Farheen"
-    #   title: "IFF Officer"
-    #   image_path: "../assets/images/members/zeenat.jpeg"
-    
 
 community-team:
     - name: "Lena Griesbeck"
@@ -91,19 +80,25 @@ alumni:
     - name: "Iva Lilova"
       title: "IFF Officer, 2022-2023"
       image_path: "../assets/images/members/iva.jpeg"
+    - name: "Stefanie Mohr"
+      title: "Finance Team Lead, 2022-2023"
+    - name: "Carmen Brendt"
+      title: "IFF Officer, 2022-2023"
+      image_path: "../assets/images/members/carmen.jpeg"
 
 ---
 
 ## Organizational Structure
 
 * [General Team Leads](#general-team-leads)
-* [Professors](#professors)
+* [Responsible Faculty](#professors)
 * [Sub-teams](#sub-teams)
     * [Social Media Team](#social-media-team)
     * [Public Relations Team](#public-relations-team)
     * [Event Organization Team](#event-organization-team)
     * [Scholarship and Finances Team](#scholarship-and-finances-team)
     * [Community and Creativity Team](#community-and-creativity-team)
+    * [Student Assistant](#student-assistant)
 * [Alumni](#past-members)
 
 
@@ -112,7 +107,7 @@ alumni:
 
 {% include member_row id="general-team-leads" type="center" %}
 
-## Professors
+## Responsible Faculty
 
 {% include member_row id="professors" type="center" %}
 
