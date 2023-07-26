@@ -20,7 +20,7 @@ title                    : "Women in CS @ TUM"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Women in CS @ TUM"
-description              : "An amazing website."
+description              : "Women in CS @ TUM (IFF)"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
