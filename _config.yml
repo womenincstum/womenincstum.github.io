@@ -20,7 +20,7 @@ title                    : "Women in CS @ TUM"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Women in CS @ TUM"
-description              : "An amazing website."
+description              : "Women in CS @ TUM (IFF)"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -112,7 +112,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:womenincsattum@gmail.com"
+      url: "mailto:womenincstum@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -164,7 +164,7 @@ footer:
       url: https://discord.com/invite/G7Ru7YdBsc
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:womenincsattum@gmail.com"
+      url: "mailto:womenincstum@gmail.com"
 
 # Reading Files
 include:
