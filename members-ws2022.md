@@ -2,7 +2,7 @@
 layout: single
 title: IFF Organization
 permalink: /members/
-semester: Summer Semester 2023
+semester: Winter Semester 2022-2023
 
 general-team-leads:
     - name: "Joy Chaeeun Lee"
@@ -13,33 +13,48 @@ general-team-leads:
 
 professors:
     - name: "Prof. Dr. Jana Giceva"
+    - name: "Prof. Dr. Debaghya Ghoshdastidar"
 
 social-media-team:
     - name: "Anastasiya Damaratskaya"
       title: "Team Lead"
       image_path: "../assets/images/members/anastasiya.jpeg"
+    - name: "Liana Soima"
+      title: "Team Lead"
+      image_path: "../assets/images/members/liana.jpeg"
+    - name: "Derin Amal"
+      title: "IFF Officer"
+      image_path: "../assets/images/members/derin.jpeg"
+    - name: "Idil Sülo"
+      title: "IFF Officer"
+      image_path: "../assets/images/members/idil.jpeg"
+    - name: "Iva Lilova"
+      title: "IFF Officer"
+      image_path: "../assets/images/members/iva.jpeg"
     - name: "Min Ting Luong"
       title: "IFF Officer"
       image_path: "../assets/images/members/min.jpeg"
+    - name: "Nahid Amiri"
+      title: "IFF Officer"
 
 pr-team:
     - name: "Irina Muntean"
       title: "Team Lead"
       image_path: "../assets/images/members/irina.jpeg"
+    - name: "Pauline Jakob"
+      title: "IFF Officer"
+      image_path: "../assets/images/members/pauline.jpeg"
     - name: "Veronika Bauer"
       title: "IFF Officer"
       image_path: "../assets/images/members/veronika.jpeg"
 
 events-team:
-    - name: "Idil Sülo"
-      title: "Team Lead"
-      image_path: "../assets/images/members/idil.jpeg"
-    - name: "Derin Amal"
-      title: "Team Lead"
-      image_path: "../assets/images/members/derin.jpeg"
     - name: "Daria Tarasova"
-      title: "IFF Officer"
+      title: "Team Lead"
       image_path: "../assets/images/members/dasha.jpeg"
+    - name: "Hanya Elhashemy"
+      title: "IFF Officer"
+      image_path: "../assets/images/members/hanya.jpeg"
     - name: "Shaghayegh Kolli"
       title: "IFF Officer"
       image_path: "../assets/images/members/shaghayegh.jpeg"
@@ -49,14 +64,18 @@ events-team:
       title: "IFF Officer"
 
 finance-team:
-    - name: "Prof. Dr. Debarghya Ghoshdastidar"
+    - name: "Stefanie Mohr"
       title: "Team Lead"
-    - name: "Pauline Jakob"
-      title: "IFF Officer"
-      image_path: "../assets/images/members/pauline.jpeg"
     - name: "Balkiss Nouri"
       title: "IFF Officer"
       image_path: "../assets/images/members/balkiss.jpeg"
+    - name: "Carmen Brendt"
+      title: "IFF Officer"
+      image_path: "../assets/images/members/carmen.jpeg"
+    - name: "Zeenat Farheen"
+      title: "IFF Officer"
+      image_path: "../assets/images/members/zeenat.jpeg"
+    
 
 community-team:
     - name: "Lena Griesbeck"
@@ -71,36 +90,19 @@ alumni:
     - name: "Ana Petrovska"
       title: "General Team Lead, 2015-2022"
       image_path: "../assets/images/members/ana.jpeg"
-    - name: "Prof. Anne Brüggemann-Klein"
-      title: "Responsible Faculty, 2015-2020"
-    - name: "Hanya Elhashemy"
-      title: "Events Team Lead, 2021-2022"
-      image_path: "../assets/images/members/hanya.jpeg"
-    - name: "Liana Soima"
-      title: "Social Media Team Lead, 2021-2022"
-      image_path: "../assets/images/members/liana.jpeg"
-    - name: "Iva Lilova"
-      title: "IFF Officer, 2022-2023"
-      image_path: "../assets/images/members/iva.jpeg"
-    - name: "Stefanie Mohr"
-      title: "Finance Team Lead, 2022-2023"
-    - name: "Carmen Brendt"
-      title: "IFF Officer, 2022-2023"
-      image_path: "../assets/images/members/carmen.jpeg"
 
 ---
 
 ## Organizational Structure
 
 * [General Team Leads](#general-team-leads)
-* [Responsible Faculty](#professors)
+* [Professors](#professors)
 * [Sub-teams](#sub-teams)
     * [Social Media Team](#social-media-team)
     * [Public Relations Team](#public-relations-team)
     * [Event Organization Team](#event-organization-team)
     * [Scholarship and Finances Team](#scholarship-and-finances-team)
     * [Community and Creativity Team](#community-and-creativity-team)
-    * [Student Assistant](#student-assistant)
 * [Alumni](#past-members)
 
 
@@ -109,7 +111,7 @@ alumni:
 
 {% include member_row id="general-team-leads" type="center" %}
 
-## Responsible Faculty
+## Professors
 
 {% include member_row id="professors" type="center" %}
 
