@@ -27,6 +27,8 @@ social-media-team:
     title: "IFF Officer"
   - name: "Krishna Mavani"
     title: "IFF Officer"
+    image_path: "../assets/images/members/krishna.jpg"
+
   - name: "Sezin Öztüfek"
     title: "IFF Officer"
   - name: "Vaishali Ravishankar"
@@ -44,6 +46,7 @@ pr-team:
     title: "IFF Officer"
   - name: "Panagiotis Petropoulakis"
     title: "IFF Officer"
+    image_path: "../assets/images/members/panagiotis.jpg"
   - name: "Isabel Marie Pfannmüller"
     title: "IFF Officer"
   - name: "Milena Poghosyan"
@@ -98,6 +101,9 @@ community-team:
     title: "IFF Officer"
   - name: "Ghena Zidan"
     title: "IFF Officer"
+  - name: "Ezgi Acikgöz"
+    title: "IFF Officer"
+    image_path: "../assets/images/members/ezgi.jpg"
 
 student-assistant:
   - name: "Olga Rodzik"
