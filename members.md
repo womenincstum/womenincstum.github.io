@@ -23,12 +23,13 @@ social-media-team:
     image_path: "../assets/images/members/min.jpeg"
   - name: "Gizem Altintas"
     title: "IFF Officer"
-  - name: "Gertruda Bazyte"
+  - name: "Gertrūda Bazytė "
     title: "IFF Officer"
+    image_path: "../assets/images/members/gertruda.jpg"
+
   - name: "Krishna Mavani"
     title: "IFF Officer"
     image_path: "../assets/images/members/krishna.jpg"
-
   - name: "Sezin Öztüfek"
     title: "IFF Officer"
   - name: "Vaishali Ravishankar"
