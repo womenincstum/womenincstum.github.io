@@ -131,9 +131,6 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: https://www.linkedin.com/company/women-in-computer-science-tum/
-    - label: "Discord"
-      icon: "fab fa-discord"
-      url: https://discord.com/invite/G7Ru7YdBsc
 
 # Site Footer
 footer:
@@ -159,9 +156,6 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: https://www.linkedin.com/company/women-in-computer-science-tum/
-    - label: "Discord"
-      icon: "fab fa-discord"
-      url: https://discord.com/invite/G7Ru7YdBsc
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:womenincstum@gmail.com"
