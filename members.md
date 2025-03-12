@@ -1,198 +1,176 @@
 ---
 layout: single
-title: IFF Organization
+title: WinCS Organization
 permalink: /members/
-semester: Summer Semester 2023
+semester: Winter Semester 2024 - 2025
 
-general-team-leads:
+board-members:
   - name: "Joy Chaeeun Lee"
-    title: "General Team Lead"
+    title: "Organization and Management"
     image_path: "../assets/images/members/joy.jpeg"
-  - name: "Adrian Kulmburg"
-    title: "General Team Lead"
-
-professors:
-  - name: "Prof. Dr. Jana Giceva"
-
-social-media-team:
-  - name: "Anastasiya Damaratskaya"
-    title: "Team Lead"
-    image_path: "../assets/images/members/anastasiya.jpeg"
-  - name: "Min Ting Luong"
-    title: "IFF Officer"
-    image_path: "../assets/images/members/min.jpeg"
-  - name: "Gizem Altintas"
-    title: "IFF Officer"
   - name: "Gertrūda Bazytė "
-    title: "IFF Officer"
-    image_path: "../assets/images/members/gertruda.jpg"
-
-  - name: "Krishna Mavani"
-    title: "IFF Officer"
-    image_path: "../assets/images/members/krishna.jpg"
-  - name: "Sezin Öztüfek"
-    title: "IFF Officer"
-  - name: "Vaishali Ravishankar"
-    title: "IFF Officer"
-  - name: "Yi Ling (Jazmin) Xu"
-    title: "IFF Officer"
-
-pr-team:
-  - name: "Veronika Bauer"
-    title: "Team Lead"
-    image_path: "../assets/images/members/veronika.jpeg"
-  - name: "Eylül Naz Can"
-    title: "IFF Officer"
-  - name: "Dominika Młynarczyk"
-    title: "IFF Officer"
-  - name: "Panagiotis Petropoulakis"
-    title: "IFF Officer"
-    image_path: "../assets/images/members/panagiotis.jpg"
-  - name: "Isabel Marie Pfannmüller"
-    title: "IFF Officer"
-  - name: "Milena Poghosyan"
-    title: "IFF Officer"
-  - name: "Nuo Xu"
-    title: "IFF Officer"
-
-events-team:
-  - name: "Idil Sülo"
-    title: "Team Lead"
-    image_path: "../assets/images/members/idil.jpeg"
-  - name: "Derin Amal"
-    title: "Team Lead"
-    image_path: "../assets/images/members/derin.jpeg"
-  - name: "Chiara Laurenza"
-    title: "IFF Officer"
-  - name: "Begüm Balat"
-    title: "IFF Officer"
-  - name: "Sarah Berbuir"
-    title: "IFF Officer"
-  - name: "Diana Bilic"
-    title: "IFF Officer"
+    title: "Marketing"
+    image_path: "../assets/images/members/gertruda.jpg"  
   - name: "Ivana Peneva"
-    title: "IFF Officer"
-  - name: "Marta Piperno"
-    title: "IFF Officer"
-  - name: "Amal Trigui"
-    title: "IFF Officer"
-  - name: "Shanshan Xu"
-    title: "IFF Officer"
-
-finance-team:
-  - name: "Prof. Dr. Debarghya Ghoshdastidar"
-    title: "Team Lead"
+    title: "PR"
+  - name: "Begüm Balat"
+    title: "Community"
   - name: "Pauline Jakob"
-    title: "IFF Officer"
+    title: "Finance"
     image_path: "../assets/images/members/pauline.jpeg"
-  - name: "Stefana Raluca Luchian"
-    title: "IFF Officer"
+  
 
-community-team:
-  - name: "Lena Griesbeck"
-    title: "Team Lead"
-    image_path: "../assets/images/members/lena.jpeg"
-  - name: "Praveena Bolli"
-    title: "IFF Officer"
-  - name: "Ina Dempel"
-    title: "IFF Officer"
-  - name: "Margarita Shibarshina"
-    title: "IFF Officer"
-  - name: "Xena Striebel"
-    title: "IFF Officer"
-  - name: "Ghena Zidan"
-    title: "IFF Officer"
-  - name: "Ezgi Acikgöz"
-    title: "IFF Officer"
-    image_path: "../assets/images/members/ezgi.jpg"
 
-student-assistant:
-  - name: "Olga Rodzik"
-    image_path: "../assets/images/members/olga.jpeg"
+
+current-members:
+  - name: "Veronika Bauer"
+    title: "WinCS Officer"
+    image_path: "../assets/images/members/veronika.jpeg"
+  - name: "Panagiotis Petropoulakis"
+    title: "WinCS Officer"
+    image_path: "../assets/images/members/panagiotis.jpg"
+  - name: "Sarah Berbuir"
+    title: "WinCS Officer"
+  - name: "Sabrina Glatz"
+    title: "WinCS Officer"
+  - name: "Fatemeh Shamsoddini Ardekani"
+    title: "WinCS Officer"
+  - name: "Nora Schneider"
+    title: "WinCS Officer"
+  - name: "Alina Ignatova"
+    title: "WinCS Officer"
+  - name: "Sivadivu Mathivanan"
+    title: "WinCS Officer"
+
 
 alumni:
   - name: "Ana Petrovska"
-    title: "General Team Lead, 2015-2022"
+    title: "General Team Lead"
     image_path: "../assets/images/members/ana.jpeg"
+  - name: "Adrian Kulmburg"
+    title: "General Team Lead"
   - name: "Prof. Anne Brüggemann-Klein"
-    title: "Responsible Faculty, 2015-2020"
+    title: "Responsible Faculty"
+  - name: "Prof. Dr. Jana Giceva"
+    title: "Responsible Faculty"
+  - name: "Prof. Dr. Debarghya Ghoshdastidar"
+    title: "Responsible Faculty"
   - name: "Hanya Elhashemy"
-    title: "Events Team Lead, 2021-2022"
+    title: "Events Team Lead"
     image_path: "../assets/images/members/hanya.jpeg"
   - name: "Liana Soima"
-    title: "Social Media Team Lead, 2021-2022"
+    title: "Social Media Team Lead"
     image_path: "../assets/images/members/liana.jpeg"
-  - name: "Iva Lilova"
-    title: "IFF Officer, 2022-2023"
-    image_path: "../assets/images/members/iva.jpeg"
   - name: "Stefanie Mohr"
-    title: "Finance Team Lead, 2022-2023"
-  - name: "Carmen Brendt"
-    title: "IFF Officer, 2022-2023"
-    image_path: "../assets/images/members/carmen.jpeg"
+    title: "Finance Team Lead"
   - name: "Irina Muntean"
     title: "Team Lead"
     image_path: "../assets/images/members/irina.jpeg"
+  - name: "Lena Griesbeck"
+    title: "Community Team Lead"
+    image_path: "../assets/images/members/lena.jpeg"
+  - name: "Idil Sülo"
+    title: "Event Team Lead"
+    image_path: "../assets/images/members/idil.jpeg"
+  - name: "Derin Amal"
+    title: "Events Team Lead"
+    image_path: "../assets/images/members/derin.jpeg"
+  - name: "Chiara Laurenza"
+    title: "Social Media Team Lead"
+  - name: "Anastasiya Damaratskaya"
+    title: "Social Media Team Lead"
+    image_path: "../assets/images/members/anastasiya.jpeg"
+  - name: "Carmen Brendt"
+    title: "WinCS Officer"
+    image_path: "../assets/images/members/carmen.jpeg"
+  - name: "Iva Lilova"
+    title: "WinCS Officer"
+    image_path: "../assets/images/members/iva.jpeg"
   - name: "Balkiss Nouri"
-    title: "IFF Officer"
+    title: "WinCS Officer"
     image_path: "../assets/images/members/balkiss.jpeg"
   - name: "Daria Tarasova"
-    title: "IFF Officer"
+    title: "WinCS Officer"
     image_path: "../assets/images/members/dasha.jpeg"
   - name: "Shaghayegh Kolli"
-    title: "IFF Officer"
+    title: "WinCS Officer"
     image_path: "../assets/images/members/shaghayegh.jpeg"
   - name: "Taiba Basit"
-    title: "IFF Officer"
+    title: "WinCS Officer"
+  - name: "Praveena Bolli"
+    title: "WinCS Officer"
+  - name: "Ina Dempel"
+    title: "WinCS Officer"
+  - name: "Margarita Shibarshina"
+    title: "WinCS Officer"
+  - name: "Xena Striebel"
+    title: "WinCS Officer"
+  - name: "Ghena Zidan"
+    title: "WinCS Officer"
+  - name: "Ezgi Acikgöz"
+    title: "WinCS Officer"
+    image_path: "../assets/images/members/ezgi.jpg"
+  - name: "Olga Rodzik"
+    title: "Student Assistant"
+    image_path: "../assets/images/members/olga.jpeg"
+  - name: "Stefana Raluca Luchian"
+    title: "WinCS Officer"
+  - name: "Diana Bilic"
+    title: "WinCS Officer"
+  - name: "Marta Piperno"
+    title: "WinCS Officer"
+  - name: "Amal Trigui"
+    title: "WinCS Officer"
+  - name: "Shanshan Xu"
+    title: "WinCS Officer"
+  - name: "Eylül Naz Can"
+    title: "WinCS Officer"
+  - name: "Dominika Młynarczyk"
+    title: "WinCS Officer"
+  - name: "Isabel Marie Pfannmüller"
+    title: "WinCS Officer"
+  - name: "Milena Poghosyan"
+    title: "WinCS Officer"
+  - name: "Nuo Xu"
+    title: "WinCS Officer"
+  - name: "Min Ting Luong"
+    title: "WinCS Officer"
+    image_path: "../assets/images/members/min.jpeg"
+  - name: "Gizem Altintas"
+    title: "WinCS Officer"
+  - name: "Krishna Mavani"
+    title: "WinCS Officer"
+    image_path: "../assets/images/members/krishna.jpg"
+  - name: "Sezin Öztüfek"
+    title: "WinCS Officer"
+  - name: "Vaishali Ravishankar"
+    title: "WinCS Officer"
+  - name: "Yi Ling (Jazmin) Xu"
+    title: "WinCS Officer"
+  - name: "Harpreet Khangura"
+    title: "WinCS Officer"
+  - name: "Lichuan Jiang"
+    title: "WinCS Officer"
+  - name: "Carolina Kwabat"
+    title: "WinCS Officer"
+  - name: "Stefani Margaritova"
+    title: "WinCS Officer"
+  
 ---
 
 ## Organizational Structure
 
-- [General Team Leads](#general-team-leads)
-- [Responsible Faculty](#professors)
-- [Sub-teams](#sub-teams)
-  - [Social Media Team](#social-media-team)
-  - [Public Relations Team](#public-relations-team)
-  - [Event Organization Team](#event-organization-team)
-  - [Scholarship and Finances Team](#scholarship-and-finances-team)
-  - [Community and Creativity Team](#community-and-creativity-team)
-  - [Student Assistant](#student-assistant)
-- [Alumni](#past-members)
+- [Board Members](#board-members)
+- [Members](#current-members)
+- [Alumni](#alumni)
 
-## General Team Leads
+<h2 id="board-members">Board Members</h2>
+{% include member_row id="board-members" type="center" %}
 
-{% include member_row id="general-team-leads" type="center" %}
 
-## Responsible Faculty
+<h2 id="current-members">Members</h2>
+{% include member_row id="current-members" type="center" %}
 
-{% include member_row id="professors" type="center" %}
 
-## Sub-Teams
-
-### Social Media Team
-
-{% include member_row id="social-media-team" type="center" %}
-
-### Public Relations (PR) Team
-
-{% include member_row id="pr-team" type="center" %}
-
-### Event Organization Team
-
-{% include member_row id="events-team" type="center" %}
-
-### Scholarship and Finances Team
-
-{% include member_row id="finance-team" type="center" %}
-
-### Community and Creativity Team
-
-{% include member_row id="community-team" type="center" %}
-
-### Student Assistant
-
-{% include member_row id="student-assistant" type="center" %}
-
-## Alumni
-
+<h2 id="alumni">Alumni</h2>
 {% include member_row id="alumni" type="center" %}
