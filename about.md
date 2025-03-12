@@ -6,7 +6,7 @@ permalink: /about/
 
 ---
 
-![](/assets/images/IFF.png)
+![](/assets/images/WinCS.png)
 
 Welcome to the webpage of Women in CS @ TUM, formerly known as Informatik-Forum Frauen (IFF)!
 
