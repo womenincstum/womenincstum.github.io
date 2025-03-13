@@ -64,7 +64,7 @@ alumni:
   - name: "Stefanie Mohr"
     title: "Finance Team Lead"
   - name: "Irina Muntean"
-    title: "Team Lead"
+    title: "PR Team Lead"
     image_path: "../assets/images/members/irina.jpeg"
   - name: "Lena Griesbeck"
     title: "Community Team Lead"
