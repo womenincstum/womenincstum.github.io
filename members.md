@@ -173,4 +173,4 @@ alumni:
 
 
 <h2 id="alumni">Alumni</h2>
-{% include member_row id="alumni" type="center" %}
+{% include alumni_row id="alumni" type="center" %}
