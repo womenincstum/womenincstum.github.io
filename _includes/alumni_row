@@ -16,7 +16,7 @@
                 {% endif %}
                 <div style="width: 100%; margin-top: 20px;">
                     <p>
-                        <span style="font-size: 16px; font-weight: normal;">{{ m.name }}</span><br/>
+                        <span style="font-size: 15px; font-weight: normal;">{{ m.name }}</span><br/>
                         {% if m.title %}
                             <b style="font-size:12px">{{ m.title }}</b>
                         {% endif %}
