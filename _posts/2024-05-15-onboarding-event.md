@@ -15,7 +15,7 @@ Following our successful recruiting event, we held a productive onboarding sessi
 ![](/assets/images/content-2024/onboarding-2024-2.jpg)
 ![](/assets/images/content-2024/onboarding-2024-3.jpg)
 
-We focused on fostering a collaborative and inclusive environment, ensuring everyone felt supported as they begin their journey with WiCS. From workshops to networking events, we outlined how our members can get involved and make the most of their time with us. We are excited to have such a passionate and diverse group of new members and can’t wait to work together to continue creating positive change in the tech industry!
+We focused on fostering a collaborative and inclusive environment, ensuring everyone felt supported as they begin their journey with WinCS. From workshops to networking events, we outlined how our members can get involved and make the most of their time with us. We are excited to have such a passionate and diverse group of new members and can’t wait to work together to continue creating positive change in the tech industry!
 
 ![](/assets/images/content-2024/onboarding-2024-4.jpg)
 
