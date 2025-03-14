@@ -70,7 +70,7 @@ alumni:
     title: "Community Team Lead<br>2022-2023"
     image_path: "../assets/images/members/lena.jpeg"
   - name: "Idil Sülo"
-    title: "Event Team Lead<br>2022-2024"
+    title: "Events Team Lead<br>2022-2024"
     image_path: "../assets/images/members/idil.jpeg"
   - name: "Derin Amal"
     title: "Events Team Lead<br>2022-2024"
