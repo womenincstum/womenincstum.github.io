@@ -31,6 +31,7 @@ current-members:
     image_path: "../assets/images/members/panagiotis.jpg"
   - name: "Sarah Berbuir"
     title: "WinCS Officer"
+    image_path: "../assets/images/members/sarah.jpg"
   - name: "Sabrina Glatz"
     title: "WinCS Officer"
   - name: "Fatemeh Shamsoddini Ardekani"
