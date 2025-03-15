@@ -13,6 +13,7 @@ board-members:
     image_path: "../assets/images/members/gertruda.jpg"  
   - name: "Ivana Peneva"
     title: "PR"
+    image_path: "../assets/images/members/ivana.jpg" 
   - name: "Begüm Balat"
     title: "Community"
   - name: "Pauline Jakob"
