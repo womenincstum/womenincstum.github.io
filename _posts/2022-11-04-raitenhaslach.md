@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Raitenhaslach Trip
-permalink: /reitenhaslach-2022/
+permalink: /raitenhaslach-2022/
 category: Internal
 author_profile: false
 ---

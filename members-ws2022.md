@@ -1,7 +1,7 @@
 ---
 layout: single
 title: IFF Organization
-permalink: /members/
+permalink: /members-ws22/
 semester: Winter Semester 2022-2023
 
 general-team-leads:
