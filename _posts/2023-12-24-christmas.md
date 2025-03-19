@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Women in CS @ TUM's Christmas Party"
+title: "WinCS Christmas Party"
 permalink: /christmas-2023/
 category: Events
 author_profile: false
