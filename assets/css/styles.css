@@ -31,7 +31,7 @@
 
 .alumni_item {
     float: left; 
-    width: 23.5%; 
+    width: 150px; 
     height: 300px; 
     text-align: center; 
     border-width: 1px; 
@@ -46,7 +46,7 @@
     border-radius: 50%;
 }
 
-@media screen and (max-width: 600px) { .alumni_item { height: 310px; } }
+@media screen and (max-width: 600px) { .alumni_item {height: 310px; } }
 
 /* Archive Layout */
 .archive-container {
