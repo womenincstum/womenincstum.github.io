@@ -4,6 +4,7 @@ title: "Tech Interview Prep Workshop"
 permalink: /tech-interview-prep-workshop-2024/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2024/tech-interview-2024-1.jpg
 ---
 
 Leveling Up Interview Skills at Tech Interview Prep Workshop with Optiver

@@ -4,6 +4,7 @@ title: "Gender Pay Gap Event"
 permalink: /gender-pay-gap-event-2023/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2023/gender-pay-gap-event-1.jpg
 ---
 
 Breaking the Silence: A Powerful Discussion on the Gender Pay Gap with Maxi Görnitz

@@ -4,6 +4,7 @@ title: "All You Can Cheat: Mobile Game Hacking Workshop"
 permalink: /hacking-workshop-2023/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2023/hacking-workshop-1.jpg
 ---
 
 Unleashing the Power of Hacking: A Thrilling Journey into Mobile Game Security at "All You Can Cheat" Workshop with Google DSC Munich and Guardsquare

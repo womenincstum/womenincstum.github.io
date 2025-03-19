@@ -4,6 +4,7 @@ title: "CS Schnupperstudium"
 permalink: /schnupperstudium-2024/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2024/schnupperstudium-2024-1.jpg
 ---
 
 Inspiring the Next Generation of Female Tech Leaders

@@ -4,6 +4,7 @@ title: "Women in CS @ TUM's Christmas Party"
 permalink: /christmas-2023/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2023/christmas-event-1.jpg
 ---
 
 Celebrating the Season of Connection

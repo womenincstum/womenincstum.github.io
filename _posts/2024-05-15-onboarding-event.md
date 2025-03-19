@@ -4,6 +4,7 @@ title: "Onboarding Event"
 permalink: /onboarding-event-2024/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2024/onboarding-2024-1.jpg
 ---
 
 Welcoming Our New Members

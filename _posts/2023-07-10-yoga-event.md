@@ -4,6 +4,7 @@ title: "Discover inner peace with Yin Yoga"
 permalink: /yoga-event-2023/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2023/yoga-event-1.jpg
 ---
 
 Finding Inner Peace: A Serene Yin Yoga Session to Rejuvenate Your Mind and Body

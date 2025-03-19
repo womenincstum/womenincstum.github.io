@@ -4,6 +4,7 @@ title: "Recruiting Event"
 permalink: /recruiting-event-2023/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2023/recruiting-event-2023-1.jpg
 ---
 
 Empowering the Future: A Warm Welcome to New Members

@@ -4,6 +4,7 @@ title: "Exam Preparation: Tips & Tricks Event"
 permalink: /exam-preparation-2024/
 category: Events
 author_profile: false
+cover_image: /assets/images/content-2024/exam-preparation-ws24-1.jpg
 ---
 
 Mastering Exams: Insights and Strategies from Our Exam Preparation Event

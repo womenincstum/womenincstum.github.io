@@ -4,6 +4,7 @@ title: Raitenhaslach Trip
 permalink: /raitenhaslach-2024/
 category: Internal
 author_profile: false
+cover_image: /assets/images/content-2024/raitenhaslach-2024-1.jpg
 ---
 
 Our trip to the beautiful TUM Science & Study Center Raitenhaslach was a huge success! 

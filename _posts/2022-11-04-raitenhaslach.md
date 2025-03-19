@@ -4,6 +4,7 @@ title: Raitenhaslach Trip
 permalink: /raitenhaslach-2022/
 category: Internal
 author_profile: false
+cover_image: /assets/images/content-2022/raitenhaslach-2.jpg
 ---
 
 This year's Raitenhaslach trip was a blast! 
