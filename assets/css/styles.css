@@ -115,6 +115,10 @@
     z-index: 2;
 }
 
+.archive-item-link:hover .archive-item-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 @media (max-width: 600px) {
     .archive-item {
         width: 100%;
