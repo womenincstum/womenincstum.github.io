@@ -47,3 +47,18 @@
 }
 
 @media screen and (max-width: 600px) { .alumni_item { height: 310px; } }
+
+.btn-blue {
+    background-color: #0c2e51;
+    color: white !important;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-blue:hover {
+    background-color: #155a8a;
+} 
