@@ -147,3 +147,83 @@
     background-color: #155a8a;
 }
 
+/* Join Community page */
+.join-page {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.join-description {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.join-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.join-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #0c2e51;
+}
+
+.join-field-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+.join-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.join-input:focus {
+    border-color: #0c2e51;
+}
+
+.join-input--code {
+    max-width: 140px;
+    flex: 0 0 auto;
+    letter-spacing: 0.2em;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.join-msg {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    min-height: 1.2em;
+}
+
+.join-msg--ok    { color: #2e7d32; }
+.join-msg--error { color: #c62828; }
+
+.btn-whatsapp {
+    background-color: #25d366;
+    font-size: 1rem;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe59;
+}
+
+@media (max-width: 600px) {
+    .join-field-row { flex-direction: column; align-items: stretch; }
+    .join-input--code { max-width: 100%; }
+}
+
