@@ -227,3 +227,50 @@
     .join-input--code { max-width: 100%; }
 }
 
+/* Join option cards */
+.join-option-card {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.join-option-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.join-option-body {
+    flex: 1;
+}
+
+.join-option-body h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    color: #0c2e51;
+}
+
+.join-option-body p {
+    margin-bottom: 0.85rem;
+}
+
+.join-verify-block {
+    margin-top: 0.75rem;
+}
+
+.join-verify-hint {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+@media (max-width: 600px) {
+    .join-option-card { flex-direction: column; gap: 0.75rem; }
+}
+

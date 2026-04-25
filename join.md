@@ -8,51 +8,75 @@ permalink: /join/
 
   <div class="join-description">
     <p>
-      Our <strong>WhatsApp Community</strong> is the best way to stay connected with Women in CS @ TUM.
-      Get notified about upcoming events, share opportunities, and connect with fellow members between events.
-    </p>
-    <p>
-      To keep the space welcoming and relevant, access is verified via your TUM email address (@tum.de).
-      Enter your email below to receive a one-time code, then use it to reveal the join link.
+      There are several ways to get involved with <strong>Women in CS @ TUM</strong> — whether you just want to stay informed, grow your career network, or help shape our community.
     </p>
   </div>
 
-  <!-- Step 1: Email input -->
-  <div id="step-email" class="join-card">
-    <h3>Step 1 — Verify your email</h3>
-    <p>Enter your email address and we'll send you a 6-digit verification code.</p>
-    <div class="join-field-row">
-      <input id="email-input" type="email" placeholder="your@tum.de" class="join-input" />
-      <button id="send-code-btn" class="btn-blue" onclick="sendCode()">Send Code</button>
+  <!-- Option 1: Direct community join -->
+  <div class="join-option-card">
+    <div class="join-option-icon">💬</div>
+    <div class="join-option-body">
+      <h3>Join our WhatsApp Community</h3>
+      <p>Connect with people, stay up to date with events, and be part of the conversation. Open to everyone — no verification needed.</p>
+      <a href="https://chat.whatsapp.com/BSPhLQLsJYWExZ7VeNWOb6" target="_blank" rel="noopener noreferrer" class="btn-blue btn-whatsapp">
+        Join Community
+      </a>
     </div>
-    <p id="email-msg" class="join-msg"></p>
   </div>
 
-  <!-- Step 2: Code input (hidden until code is sent) -->
-  <div id="step-code" class="join-card" style="display:none;">
-    <h3>Step 2 — Enter verification code</h3>
-    <p>Check your inbox for a 6-digit code and enter it below.</p>
-    <div class="join-field-row">
-      <input id="code-input" type="text" inputmode="numeric" maxlength="6" placeholder="123456" class="join-input join-input--code" />
-      <button id="verify-btn" class="btn-blue" onclick="verifyCode()">Verify</button>
+  <!-- Option 2: Talent Pool (email verification) -->
+  <div class="join-option-card">
+    <div class="join-option-icon">🌟</div>
+    <div class="join-option-body">
+      <h3>Join the WinCS TUM Talent Pool</h3>
+      <p>An exclusive group connecting TUM students with career opportunities, internships, and industry contacts curated by our network. Access requires a verified TUM email address.</p>
+
+      <!-- Step 1: Email input -->
+      <div id="step-email" class="join-verify-block">
+        <div class="join-field-row">
+          <input id="email-input" type="email" placeholder="your@tum.de" class="join-input" />
+          <button id="send-code-btn" class="btn-blue" onclick="sendCode()">Send Code</button>
+        </div>
+        <p id="email-msg" class="join-msg"></p>
+      </div>
+
+      <!-- Step 2: Code input -->
+      <div id="step-code" class="join-verify-block" style="display:none;">
+        <p class="join-verify-hint">Check your inbox for a 6-digit code and enter it below.</p>
+        <div class="join-field-row">
+          <input id="code-input" type="text" inputmode="numeric" maxlength="6" placeholder="123456" class="join-input join-input--code" />
+          <button id="verify-btn" class="btn-blue" onclick="verifyCode()">Verify</button>
+        </div>
+        <p id="code-msg" class="join-msg"></p>
+      </div>
+
+      <!-- Step 3: Talent Pool link -->
+      <div id="step-join" style="display:none;">
+        <p class="join-msg join-msg--ok">You're verified! Click below to join the Talent Pool group.</p>
+        <a href="https://chat.whatsapp.com/IDetXVdkRLlBSOLVJQtH8t" target="_blank" rel="noopener noreferrer" class="btn-blue btn-whatsapp">
+          Join Talent Pool
+        </a>
+      </div>
+
     </div>
-    <p id="code-msg" class="join-msg"></p>
   </div>
 
-  <!-- Step 3: WhatsApp link (hidden until verified) -->
-  <div id="step-join" class="join-card" style="display:none;">
-    <h3>You're verified!</h3>
-    <p>Click the button below to join our WhatsApp Community.</p>
-    <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-blue btn-whatsapp">
-      Join WhatsApp Community
-    </a>
+  <!-- Option 3: Become an organizer -->
+  <div class="join-option-card">
+    <div class="join-option-icon">🙋</div>
+    <div class="join-option-body">
+      <h3>Become an Active Organizer</h3>
+      <p>Want to help shape events, run workshops, or grow our community? We recruit new organizers periodically. Stay tuned for announcements on our
+        <a href="https://www.instagram.com/women.in.cs.at.tum/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        and in the WhatsApp Community.
+      </p>
+    </div>
   </div>
 
 </div>
 
 <script>
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwUHrir0OPa6X10oy6q4wsds_tT2_iIUpuZsMGPgQs6v3GWm8AJYM482G7AF4vTeEn7/exec";
-const WHATSAPP_URL = "https://chat.whatsapp.com/IDetXVdkRLlBSOLVJQtH8t";
 
 function setMsg(id, text, isError) {
   const el = document.getElementById(id);
@@ -106,7 +130,7 @@ async function verifyCode() {
     const data = await res.json();
     if (data.success) {
       document.getElementById("step-code").style.display = "none";
-      document.getElementById("whatsapp-link").href = WHATSAPP_URL;
+      document.getElementById("step-email").style.display = "none";
       document.getElementById("step-join").style.display = "block";
     } else {
       setMsg("code-msg", data.message || "Incorrect code. Please try again.", true);
@@ -118,7 +142,6 @@ async function verifyCode() {
   }
 }
 
-// Allow Enter key to submit
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("email-input").addEventListener("keydown", function (e) {
     if (e.key === "Enter") sendCode();
