@@ -12,7 +12,7 @@ permalink: /join/
       Get notified about upcoming events, share opportunities, and connect with fellow members between events.
     </p>
     <p>
-      To keep the space welcoming and relevant, access is verified via your university or institutional email address.
+      To keep the space welcoming and relevant, access is verified via your TUM email address (@tum.de).
       Enter your email below to receive a one-time code, then use it to reveal the join link.
     </p>
   </div>
@@ -22,7 +22,7 @@ permalink: /join/
     <h3>Step 1 — Verify your email</h3>
     <p>Enter your email address and we'll send you a 6-digit verification code.</p>
     <div class="join-field-row">
-      <input id="email-input" type="email" placeholder="your@email.com" class="join-input" />
+      <input id="email-input" type="email" placeholder="your@tum.de" class="join-input" />
       <button id="send-code-btn" class="btn-blue" onclick="sendCode()">Send Code</button>
     </div>
     <p id="email-msg" class="join-msg"></p>
@@ -51,9 +51,8 @@ permalink: /join/
 </div>
 
 <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwB-V_tk7y0LEYnNjDMYygYtbwxi-AboMKKFe7YGR4D6X7yNEOW49dImPpQbHTpSI9i/exec";
-// TODO: Replace with your actual WhatsApp community invite link
-const WHATSAPP_URL = "https://chat.whatsapp.com/TODO_REPLACE_WITH_YOUR_INVITE_LINK";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwUHrir0OPa6X10oy6q4wsds_tT2_iIUpuZsMGPgQs6v3GWm8AJYM482G7AF4vTeEn7/exec";
+const WHATSAPP_URL = "https://chat.whatsapp.com/IDetXVdkRLlBSOLVJQtH8t";
 
 function setMsg(id, text, isError) {
   const el = document.getElementById(id);
@@ -70,6 +69,7 @@ function setLoading(btnId, loading) {
 async function sendCode() {
   const email = document.getElementById("email-input").value.trim();
   if (!email) { setMsg("email-msg", "Please enter your email address.", true); return; }
+  if (!email.endsWith("@tum.de")) { setMsg("email-msg", "Please use your TUM email address (@tum.de).", true); return; }
 
   setLoading("send-code-btn", true);
   setMsg("email-msg", "", false);
