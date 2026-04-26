@@ -7,7 +7,14 @@ function doGet(e) {
   if (action === "sendCode") {
     result = sendVerificationCode(email);
   } else if (action === "verifyCode") {
-    result = verifyCode(email, code);
+    result = verifyCode(
+      email,
+      code,
+      e.parameter.name   || "",
+      e.parameter.gender || "",
+      e.parameter.status || "",
+      e.parameter.field  || ""
+    );
   } else {
     result = { success: false, message: "Unknown action." };
   }
@@ -24,8 +31,7 @@ function sendVerificationCode(email) {
 
   var code = Math.floor(100000 + Math.random() * 900000).toString();
 
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Codes");
-  // Store code as string by prefixing with a single quote trick via setValues
+  var sheet   = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Codes");
   var nextRow = sheet.getLastRow() + 1;
   sheet.getRange(nextRow, 1).setValue(email);
   sheet.getRange(nextRow, 2).setNumberFormat("@").setValue(code);
@@ -40,33 +46,40 @@ function sendVerificationCode(email) {
   return { success: true };
 }
 
-function verifyCode(email, userCode) {
+function verifyCode(email, userCode, name, gender, status, field) {
   if (!email || !userCode) {
     return { success: false, message: "Email and code are required." };
   }
 
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Codes");
-  var data  = sheet.getDataRange().getValues();
-  var now   = new Date();
-  var tenMinutes = 10 * 60 * 1000;
+  var sheet  = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Codes");
+  var data   = sheet.getDataRange().getValues();
+  var now    = new Date();
+  var tenMin = 10 * 60 * 1000;
 
   var incomingEmail = email.toString().trim().toLowerCase();
   var incomingCode  = userCode.toString().trim();
 
-  // Start from 0 in case there is no header row
   for (var i = data.length - 1; i >= 0; i--) {
     var rowEmail     = data[i][0].toString().trim().toLowerCase();
     var rowCode      = data[i][1].toString().trim();
     var rowTimestamp = new Date(data[i][2]);
 
-    // Skip header row if present
     if (rowEmail === "email" || rowCode === "code") continue;
 
     if (rowEmail === incomingEmail && rowCode === incomingCode) {
-      if (now - rowTimestamp > tenMinutes) {
+      if (now - rowTimestamp > tenMin) {
         return { success: false, message: "Code has expired. Please request a new one." };
       }
 
+      // Save profile to Members sheet
+      var members = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Members");
+      if (!members) {
+        members = SpreadsheetApp.getActiveSpreadsheet().insertSheet("Members");
+        members.appendRow(["Email", "Name", "Gender", "Study Status", "Study Program", "Joined At"]);
+      }
+      members.appendRow([email, name, gender, status, field, new Date()]);
+
+      // Log verified access
       SpreadsheetApp.getActiveSpreadsheet()
         .getSheetByName("Log")
         .appendRow([email, new Date()]);
