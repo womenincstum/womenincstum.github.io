@@ -111,6 +111,11 @@ permalink: /join/
           </div>
 
           <div class="join-profile-field">
+            <label for="phone-input">WhatsApp phone number</label>
+            <input id="phone-input" type="tel" placeholder="+49 123 456 7890" class="join-input" />
+          </div>
+
+          <div class="join-profile-field">
             <label for="code-input">Verification code</label>
             <input id="code-input" type="text" inputmode="numeric" maxlength="6" placeholder="123456" class="join-input join-input--code" />
           </div>
@@ -125,10 +130,11 @@ permalink: /join/
 
       <!-- Step 3: Talent Pool link -->
       <div id="step-join" style="display:none;">
-        <p class="join-msg join-msg--ok">You're verified! Click below to join the Talent Pool group.</p>
+        <p class="join-msg join-msg--ok">You're verified! Click below to request to join the Talent Pool group. An admin will approve your request within 3 working days.</p>
         <a href="https://chat.whatsapp.com/IDetXVdkRLlBSOLVJQtH8t" target="_blank" rel="noopener noreferrer" class="btn-blue btn-whatsapp">
           Join Talent Pool
         </a>
+        <p style="margin-top:0.75rem;font-size:0.875rem;color:#555;">Having trouble joining? Contact us at <a href="mailto:womenincstum@gmail.com">womenincstum@gmail.com</a>.</p>
       </div>
 
     </div>
@@ -205,11 +211,13 @@ async function verifyCode() {
   const fieldSelect = document.getElementById("field-input").value;
   const fieldOther  = document.getElementById("other-field-input").value.trim();
   const field = fieldSelect === "Other" ? (fieldOther || "Other") : fieldSelect;
+  const phone = document.getElementById("phone-input").value.trim();
 
   if (!name)   { setMsg("code-msg", "Please enter your full name.", true); return; }
   if (!gender) { setMsg("code-msg", "Please select your gender.", true); return; }
   if (!status) { setMsg("code-msg", "Please select your study status.", true); return; }
   if (!fieldSelect) { setMsg("code-msg", "Please select your study program.", true); return; }
+  if (!phone)  { setMsg("code-msg", "Please enter your WhatsApp phone number.", true); return; }
   if (!code)   { setMsg("code-msg", "Please enter the 6-digit verification code.", true); return; }
 
   setLoading("verify-btn", true);
@@ -217,7 +225,7 @@ async function verifyCode() {
 
   const params = new URLSearchParams({
     action: "verifyCode",
-    email, code, name, gender, status, field
+    email, code, name, gender, status, field, phone
   });
 
   try {
