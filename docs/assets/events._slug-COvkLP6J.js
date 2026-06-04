@@ -1,0 +1,1 @@
+import{k as e}from"./index-4OfCiFqe.js";import{a as s,S as t}from"./SiteFooter-CiVUQimf.js";const i=({error:r})=>e.jsxs("div",{className:"min-h-screen flex flex-col",children:[e.jsx(s,{}),e.jsx("div",{className:"flex-1 grid place-items-center p-10 text-center",children:e.jsx("p",{className:"text-muted-foreground",children:r.message})}),e.jsx(t,{})]});export{i as errorComponent};
