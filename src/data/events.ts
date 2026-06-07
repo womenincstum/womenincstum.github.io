@@ -31,6 +31,8 @@ import onboarding2 from "@/assets/events/onboarding-2026-2.jpg";
 import onboarding3 from "@/assets/events/onboarding-2026-3.jpg";
 import onboarding4 from "@/assets/events/onboarding-2026-4.jpg";
 import onboarding5 from "@/assets/events/onboarding-2026-5.jpg";
+import onboarding6 from "@/assets/events/onboarding-2026-6.jpg";
+import onboarding7 from "@/assets/events/onboarding-2026-7.jpg";
 
 export type EventType = "Social" | "Workshop" | "Career" | "Internal";
 
@@ -182,7 +184,7 @@ More information and the detailed agenda will follow soon.`,
     summary: `Last week, we gathered for our official onboarding session to welcome our newest members to the team! The evening kicked off with fun icebreakers and a quick intro to our club and the exciting projects ahead, followed by an evening at the StuStaCulum to get to know each other better.
 
 To our new members - we can’t wait to see the projects you’ll build and how you’ll grow together over the coming months.`,
-    gallery: [onboarding1, onboarding2, onboarding3, onboarding4, onboarding5],
+    gallery: [onboarding7, onboarding6, onboarding1, onboarding2, onboarding3, onboarding4, onboarding5],
   },
   {
     slug: "info-night-2026",
