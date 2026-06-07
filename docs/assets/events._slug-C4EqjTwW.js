@@ -1,0 +1,1 @@
+import{j as e}from"./index-DYxpLL66.js";import{S as s,a as t}from"./SiteFooter-DzT2p7md.js";const i=({error:r})=>e.jsxs("div",{className:"min-h-screen flex flex-col",children:[e.jsx(s,{}),e.jsx("div",{className:"flex-1 grid place-items-center p-10 text-center",children:e.jsx("p",{className:"text-muted-foreground",children:r.message})}),e.jsx(t,{})]});export{i as errorComponent};
