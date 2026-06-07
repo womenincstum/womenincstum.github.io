@@ -120,7 +120,7 @@ Please contact: ivana.peneva@tum.de`,
   {
     slug: "euroavia-aerospace-researchers-2026",
     title: "Meet the Researchers with EUROAVIA",
-    date: "Thursday, June 18, 2026 · 09:00–11:00",
+    date: "June 18, 2026 · 09:00–11:00",
     isoDate: "2026-06-18T09:00:00",
     location: "Sandstraße 33, München (Tacto office)",
     type: "Career",
