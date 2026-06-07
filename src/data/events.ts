@@ -181,7 +181,7 @@ More information and the detailed agenda will follow soon.`,
     location: "TUM Garching",
     type: "Internal",
     description: "Official onboarding session to welcome our newest members to the team!",
-    summary: `Last week, we gathered for our official onboarding session to welcome our newest members to the team! The evening kicked off with fun icebreakers and a quick intro to our club and the exciting projects ahead, followed by an evening at the StuStaCulum to get to know each other better.
+    summary: `We had our official onboarding session to welcome our newest members to the team! The evening kicked off with fun icebreakers and a quick intro to our club and the exciting projects ahead, followed by an evening at the StuStaCulum to get to know each other better.
 
 To our new members - we can’t wait to see the projects you’ll build and how you’ll grow together over the coming months.`,
     gallery: [onboarding7, onboarding6, onboarding1, onboarding2, onboarding3, onboarding4, onboarding5],

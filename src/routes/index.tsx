@@ -47,7 +47,7 @@ function Landing() {
             <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-5xl">
               We build a supportive community for women to connect, share knowledge, and grow
               together. Join our community activities, hands-on workshops, and industry
-              career events to thrive.
+              career events below.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
