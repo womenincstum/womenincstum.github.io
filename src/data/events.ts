@@ -26,6 +26,11 @@ import phd2025_1 from "@/assets/events/phd-2025-1.png";
 import phd2025_2 from "@/assets/events/phd-2025-2.png";
 import phd2025_3 from "@/assets/events/phd-2025-3.png";
 import phd2025_4 from "@/assets/events/phd-2025-4.webp";
+import onboarding1 from "@/assets/events/onboarding-2026-1.jpg";
+import onboarding2 from "@/assets/events/onboarding-2026-2.jpg";
+import onboarding3 from "@/assets/events/onboarding-2026-3.jpg";
+import onboarding4 from "@/assets/events/onboarding-2026-4.jpg";
+import onboarding5 from "@/assets/events/onboarding-2026-5.jpg";
 
 export type EventType = "Social" | "Workshop" | "Career" | "Internal";
 
@@ -48,6 +53,7 @@ export interface EventItem {
   signupNote?: string; // e.g. "More information & signup coming soon."
   gallery?: string[]; // image URLs for the detail page
   partners?: EventPartner[];
+  signupLink?: string;
 }
 
 // Helper to build image URLs from the legacy archive site
@@ -81,44 +87,103 @@ const stock = {
 };
 
 export const events: EventItem[] = [
-  // ===== Upcoming =====
+  // ===== Upcoming =====x
   {
-    slug: "jetbrains-dev-tools-2026",
-    title: "Developer Tools Workshop with JetBrains",
-    date: "October 21, 2026 · 18:00",
-    isoDate: "2026-10-21T18:00:00",
-    location: "JetBrains Office, Munich",
-    type: "Career",
-    description: "Internship tips and a session with a JetBrains recruiter on behavioural questions.",
-    summary: "An evening at the JetBrains office focused on helping you land an internship. We will start with practical tips on the JetBrains internship programme, then a recruiter will join us to discuss common behavioural questions, how to approach them, and what interviewers look for. Plenty of time for Q&A and networking afterwards.",
-    signupNote: "Signup coming soon.",
-    partners: [{ name: "JetBrains", logo: jetbrainsLogo, website: "https://www.jetbrains.com/" }],
+    slug: "support-tum-cs-schnupperstudium-2026",
+    title: "CS Schnupperstudium for High School Girls",
+    date: "June 15–17, 2026",
+    isoDate: "2026-06-15T09:00:00",
+    location: "TUM Campus Garching",
+    type: "Social",
+    description: "Help make the CS Schnupperstudium welcoming, informative, and inspiring for high school girls by sharing your experience as a TUM student.",
+    summary: `The CS Schnupperstudium is a three-day program for high school girls who are curious about Computer Science and want to experience what studying at TUM is like.
+
+From Monday, June 15 to Wednesday, June 17, 2026, the girls will visit the TUM Campus Garching and take part in lectures, workshops, campus activities, and informal exchange sessions. The program is mainly held in German and is designed for senior high school girls who are considering studying Computer Science or who simply want to get a first impression of university life.
+Throughout the three days, the participants will get to know different areas of Computer Science, meet other girls with similar interests, explore the campus, and talk to students and faculty members about studying, student life, career paths, and everyday experiences at TUM.
+
+How TUM Students Can Support Us
+We are looking for TUM students, student clubs, and volunteers who would like to help make the Schnupperstudium welcoming, informative, and inspiring.
+You can support us in different ways, for example by:
+• joining participants during Mensa hours and talking to them about student life,
+• introducing your student club or initiative,
+• sharing your personal experience as a TUM student,
+• or supporting us in any other way during the program.
+
+Your perspective can make a big difference. For many participants, talking to current students is one of the most valuable parts of the program, because it gives them an honest and personal insight into what studying Computer Science at TUM is really like.
+
+Interested in Helping?
+Please contact: ivana.peneva@tum.de`,
+    signupLink: "https://docs.google.com/forms/d/e/1FAIpQLSdH1WzkdNGdCsfslLADWMEEz93EsFTrNbM2Bb3n5cFUT40emw/viewform?usp=header",
   },
   {
     slug: "euroavia-aerospace-researchers-2026",
-    title: "Women in Aerospace — Meet the Researchers with EUROAVIA",
-    date: "June 18, 2026 · 09:00",
+    title: "Meet the Researchers with EUROAVIA",
+    date: "Thursday, June 18, 2026 · 09:00–11:00",
     isoDate: "2026-06-18T09:00:00",
-    location: "Sandstraße 33, 80335 München (Tacto office)",
+    location: "Sandstraße 33, München (Tacto office)",
     type: "Career",
+    description: "An event for women and gender minorities who are curious about aerospace and computer science and want to connect with professionals in the field.",
+    summary: `An event for women and gender minorities who are curious about aerospace and computer science and want to connect with professionals in the field.
+
+We will meet at Sandstrasse 33 (at the Tacto office) for an inspiring morning of talks, personal stories, and an open Q&A. Organized by EUROAVIA Munich and Women in Computer Science, the event brings you face-to-face with three researchers from DLR and the Max Planck Institute of Biochemistry.
+
+Throughout the event, you will get to hear about their career journeys, learn about their current research projects, and ask your own questions. It is a great opportunity to meet like-minded peers, discover exciting career paths, and chat with researchers about their everyday experiences in science and engineering.`,
+    signupLink: "https://luma.com/ahzx26pj",
     href: "https://www.euroavia-muenchen.de/en/front-page/",
-    description: "An evening with EUROAVIA featuring aerospace researchers Cecile Deprez and Amita Shrestha sharing their current project, research skills, and experiences — followed by an interactive Q&A session.",
-    summary: "An evening with EUROAVIA dedicated to women in aerospace. We are joined by researchers Cecile Deprez and Amita Shrestha, who will present a project they are currently working on and share valuable skills and experiences from their research journeys. After the talks, there will be plenty of time to ask questions and interact with the researchers directly. A great opportunity to explore aerospace research and connect with inspiring women in the field.",
-    signupNote: "Signup coming soon.",
     partners: [{ name: "EUROAVIA Munich", logo: euroaviaLogo, website: "https://www.euroavia-muenchen.de/en/front-page/" }],
   },
   {
     slug: "summer-party-2026",
     title: "Summer Party",
-    date: "June 2026",
-    isoDate: "2026-06-28T18:00:00",
+    date: "July 2026",
+    isoDate: "2026-07-28T18:00:00",
     location: "Munich",
     type: "Social",
-    description: "End the semester with us — food, drinks, and good company.",
+    description: "A social to wrap up the semester and celebrate what we've accomplished over the past months.",
+    signupNote: "More information and signup coming soon.",
+  },
+  {
+    slug: "women-in-venture-startups-2026",
+    title: "Women in Venture & Startups",
+    date: "July 1, 2026 · 18:00–21:00",
+    isoDate: "2026-07-01T18:00:00",
+    location: "StudiTUM Garching",
+    type: "Workshop",
+    description: "Looking to dive into entrepreneurship, pick up some practical skills, and connect with inspiring women from the startup ecosystem?",
+    summary: `Looking to dive into entrepreneurship, pick up some practical skills, and connect with inspiring women from the startup ecosystem?
+
+We will gather at StudiTUM for an interactive evening featuring a hands-on mini-workshop led by Bianca, followed by a personal insight session where female founders share their stories and experiences. Throughout the evening, you will have the opportunity to get inspired, ask questions, and chat informally with founders and peers over snacks and drinks.
+
+More information and the detailed agenda will follow soon.`,
     signupNote: "More information & signup coming soon.",
+  },
+  {
+    slug: "jetbrains-dev-tools-2026",
+    title: "Career Workshop with JetBrains",
+    date: "October 21, 2026 · 18:00",
+    isoDate: "2026-10-21T18:00:00",
+    location: "JetBrains Office, Munich",
+    type: "Career",
+    description: "Join us for a Career Workshop with JetBrains. More information will follow soon — join our WhatsApp community to stay informed!",
+    summary: "Join us for a Career Workshop with JetBrains. More information and the detailed agenda will follow soon. In the meantime, join our WhatsApp community to stay informed!",
+    signupNote: "More information coming soon.",
+    partners: [{ name: "JetBrains", logo: jetbrainsLogo, website: "https://www.jetbrains.com/" }],
   },
 
   // ===== Past =====
+  {
+    slug: "internal-onboarding-2026",
+    title: "Onboarding Event",
+    date: "June 3, 2026 · 18:00",
+    isoDate: "2026-06-03T18:00:00",
+    location: "TUM Garching",
+    type: "Internal",
+    description: "Official onboarding session to welcome our newest members to the team!",
+    summary: `Last week, we gathered for our official onboarding session to welcome our newest members to the team! The evening kicked off with fun icebreakers and a quick intro to our club and the exciting projects ahead, followed by an evening at the StuStaCulum to get to know each other better.
+
+To our new members - we can’t wait to see the projects you’ll build and how you’ll grow together over the coming months.`,
+    gallery: [onboarding1, onboarding2, onboarding3, onboarding4, onboarding5],
+  },
   {
     slug: "info-night-2026",
     title: "WinCS Info Night & Karaoke 2026",

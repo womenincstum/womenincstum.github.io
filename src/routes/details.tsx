@@ -42,17 +42,24 @@ const board: Person[] = [
 
 const activeMembers: Person[] = [
   { name: "Ivana Peneva", photo: ivanaImg },
-  { name: "Sofiia Storozhenko", photo: sofiiaImg },
-  { name: "Sabrina Glatz", photo: sabrinaImg },
-  
   { name: "Alina Ignatova", photo: alinaImg },
   { name: "Rima Neji", photo: rimaImg },
-  { name: "Hristina Ivanova", photo: hristinaImg },
   { name: "Anastasiia Korzhylova", photo: anastasiiaImg },
-  { name: "Maheen Rizwan", photo: maheenImg },
   { name: "Maissa Nouicer", photo: maissaImg },
   { name: "Sarra Ouertani", photo: sarraImg },
   { name: "Evelina Bublyk", photo: evelinaImg },
+  { name: "Jana Brade" },
+  { name: "Jialu Cheng" },
+  { name: "Nora Paul" },
+  { name: "Chrissa Philip" },
+  { name: "Milena Ryzner" },
+  { name: "Yaroslava Melnyk" },
+  { name: "Anya" },
+  { name: "Heidi Albarazi" },
+  { name: "Nitika Chivte" },
+  { name: "Anna Engel" },
+  { name: "Izdihar Farahdina" },
+  { name: "Didem Nur Ayaroglu" },
 ];
 
 type Alum = { name: string; role?: string; years?: string };
@@ -190,11 +197,13 @@ function Details() {
           The people behind every workshop, social, and partnership - volunteering their time to
           build a space where we can all grow together.
         </p>
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {activeMembers.map((m) => (
-            <div key={m.name} className="glass rounded-2xl p-4 flex flex-col items-center text-center gap-3">
-              <PersonAvatar person={m} size="sm" />
-              <p className="font-medium text-sm leading-tight">{m.name}</p>
+            <div key={m.name} className="glass rounded-2xl p-6 flex flex-col items-center text-center gap-4">
+              <PersonAvatar person={m} size="lg" />
+              <div>
+                <p className="font-semibold text-xl">{m.name}</p>
+              </div>
             </div>
           ))}
         </div>
