@@ -186,31 +186,44 @@ function EventDetailPage() {
           </div>
         </div>
 
-        {event.signupNote && (
-          <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-            <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
-            {event.signupNote}
-          </div>
-        )}
+        <div className="mt-6 flex flex-wrap gap-3 items-center">
+          {event.signupNote && !event.signupLink && (
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+              <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
+              {event.signupNote}
+            </div>
+          )}
 
-        {!isPast && event.signupNote && (
-          <a
-            href="https://chat.whatsapp.com/BSPhLQLsJYWExZ7VeNWOb6"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-4 inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-medium text-green-400 hover:bg-green-500/20 transition"
-          >
-            <MessageCircle size={16} /> Join our WhatsApp community for updates
-          </a>
-        )}
+          {!isPast && event.signupLink && (
+            <a
+              href={event.signupLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-2 text-sm font-semibold hover:bg-primary/90 transition shadow-lg shadow-primary/10"
+            >
+              {event.title.toLowerCase().includes("support") ? "Sign up to Support" : "Register for Event"}
+            </a>
+          )}
+
+          {!isPast && event.signupNote && !event.signupLink && (
+            <a
+              href="https://chat.whatsapp.com/BSPhLQLsJYWExZ7VeNWOb6"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-medium text-green-400 hover:bg-green-500/20 transition"
+            >
+              <MessageCircle size={16} /> Join our WhatsApp community for updates
+            </a>
+          )}
+        </div>
 
         {event.summary && (
-          <p className="mt-8 max-w-4xl text-lg text-foreground/90 leading-relaxed">
+          <p className="mt-8 max-w-4xl text-lg text-foreground/90 leading-relaxed whitespace-pre-line">
             {renderWithLinks(event.summary, event.href, LINKABLE_TERMS[event.slug])}
           </p>
         )}
         {!event.summary && event.description && (
-          <p className="mt-8 max-w-4xl text-lg text-foreground/90 leading-relaxed">
+          <p className="mt-8 max-w-4xl text-lg text-foreground/90 leading-relaxed whitespace-pre-line">
             {renderWithLinks(event.description, event.href, LINKABLE_TERMS[event.slug])}
           </p>
         )}
