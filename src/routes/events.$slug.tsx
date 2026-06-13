@@ -10,28 +10,52 @@ const LINKABLE_TERMS: Record<string, string[]> = {
   "euroavia-aerospace-researchers-2026": ["EUROAVIA"],
 };
 
+const URL_PATTERN = /(https?:\/\/[^\s<]+[^\s<.,;:!?')\]\}])/g;
+
 function renderWithLinks(text: string, href?: string, terms?: string[]): ReactNode {
-  if (!href || !terms || terms.length === 0) return text;
-  const pattern = new RegExp(
-    `(${terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
-    "g",
-  );
-  const parts = text.split(pattern);
-  return parts.map((part, i) =>
-    terms.includes(part) ? (
-      <a
-        key={i}
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        className="text-primary hover:underline font-medium"
-      >
-        {part}
-      </a>
-    ) : (
-      <Fragment key={i}>{part}</Fragment>
-    ),
-  );
+  const segments = text.split(URL_PATTERN);
+
+  return segments.map((segment, segmentIndex) => {
+    if (/^https?:\/\//.test(segment)) {
+      return (
+        <a
+          key={segmentIndex}
+          href={segment}
+          target="_blank"
+          rel="noreferrer"
+          className="text-primary hover:underline font-medium break-words"
+        >
+          {segment}
+        </a>
+      );
+    }
+
+    if (!href || !terms || terms.length === 0) {
+      return <Fragment key={segmentIndex}>{segment}</Fragment>;
+    }
+
+    const pattern = new RegExp(
+      `(${terms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+      "g",
+    );
+    const parts = segment.split(pattern);
+
+    return parts.map((part, partIndex) =>
+      terms.includes(part) ? (
+        <a
+          key={`${segmentIndex}-${partIndex}`}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="text-primary hover:underline font-medium"
+        >
+          {part}
+        </a>
+      ) : (
+        <Fragment key={`${segmentIndex}-${partIndex}`}>{part}</Fragment>
+      ),
+    );
+  });
 }
 
 

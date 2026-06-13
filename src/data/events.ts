@@ -146,18 +146,17 @@ Throughout the event, you will get to hear about their career journeys, learn ab
   },
   {
     slug: "women-in-venture-startups-2026",
-    title: "Women in Venture & Startups",
-    date: "July 1, 2026 · 18:00–21:00",
+    title: "Women Who Build: An Evening of Stories & Skills",
+    date: "July 1, 2026 · 18:00–20:00",
     isoDate: "2026-07-01T18:00:00",
-    location: "StudiTUM Garching",
+    location: "StudiTUM Garching, Lichtenbergstr. 3",
     type: "Workshop",
     description: "Looking to dive into entrepreneurship, pick up some practical skills, and connect with inspiring women from the startup ecosystem?",
     summary: `Looking to dive into entrepreneurship, pick up some practical skills, and connect with inspiring women from the startup ecosystem?
 
-We will gather at StudiTUM for an interactive evening featuring a hands-on mini-workshop led by Bianca, followed by a personal insight session where female founders share their stories and experiences. Throughout the evening, you will have the opportunity to get inspired, ask questions, and chat informally with founders and peers over snacks and drinks.
-
-More information and the detailed agenda will follow soon.`,
-    signupNote: "More information & signup coming soon.",
+We're hosting an evening for women in STEM who are curious about startups and actually building things. “Women Who Build: An Evening of Stories & Skills” is a hands-on workshop in collaboration with UnternehmerTUM for Innovators, with real tools, honest stories from women founders who started from scratch, and space to connect with people on the same path. Spots are limited so grab yours early. Register via https://lnkd.in/dUmT2UBi.
+`,
+    signupLink: "https://lnkd.in/dUmT2UBi",
   },
   {
     slug: "jetbrains-dev-tools-2026",
