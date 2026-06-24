@@ -9,12 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ImprintRouteImport } from './routes/imprint'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as DetailsRouteImport } from './routes/details'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EventsSlugRouteImport } from './routes/events.$slug'
 
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImprintRoute = ImprintRouteImport.update({
   id: '/imprint',
   path: '/imprint',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/details': typeof DetailsRoute
   '/events': typeof EventsRouteWithChildren
   '/imprint': typeof ImprintRoute
+  '/privacy': typeof PrivacyRoute
   '/events/$slug': typeof EventsSlugRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/details': typeof DetailsRoute
   '/events': typeof EventsRouteWithChildren
   '/imprint': typeof ImprintRoute
+  '/privacy': typeof PrivacyRoute
   '/events/$slug': typeof EventsSlugRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,28 @@ export interface FileRoutesById {
   '/details': typeof DetailsRoute
   '/events': typeof EventsRouteWithChildren
   '/imprint': typeof ImprintRoute
+  '/privacy': typeof PrivacyRoute
   '/events/$slug': typeof EventsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/details' | '/events' | '/imprint' | '/events/$slug'
+  fullPaths:
+    | '/'
+    | '/details'
+    | '/events'
+    | '/imprint'
+    | '/privacy'
+    | '/events/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/details' | '/events' | '/imprint' | '/events/$slug'
-  id: '__root__' | '/' | '/details' | '/events' | '/imprint' | '/events/$slug'
+  to: '/' | '/details' | '/events' | '/imprint' | '/privacy' | '/events/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/details'
+    | '/events'
+    | '/imprint'
+    | '/privacy'
+    | '/events/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,10 +98,18 @@ export interface RootRouteChildren {
   DetailsRoute: typeof DetailsRoute
   EventsRoute: typeof EventsRouteWithChildren
   ImprintRoute: typeof ImprintRoute
+  PrivacyRoute: typeof PrivacyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/imprint': {
       id: '/imprint'
       path: '/imprint'
@@ -134,6 +164,7 @@ const rootRouteChildren: RootRouteChildren = {
   DetailsRoute: DetailsRoute,
   EventsRoute: EventsRouteWithChildren,
   ImprintRoute: ImprintRoute,
+  PrivacyRoute: PrivacyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
