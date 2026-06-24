@@ -16,8 +16,9 @@ export function SiteFooter() {
           <a href="https://www.instagram.com/women.in.cs.at.tum/" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-primary"><Instagram size={20} /></a>
           <a href="mailto:womenincstum@gmail.com" aria-label="Email" className="hover:text-primary"><Mail size={20} /></a>
         </div>
-        <div className="text-xs text-muted-foreground text-right">
+        <div className="text-xs text-muted-foreground text-right flex justify-end gap-4">
           <Link to="/imprint" className="hover:text-primary">Imprint</Link>
+          <Link to="/privacy" className="hover:text-primary">Privacy Policy</Link>
         </div>
       </div>
     </footer>

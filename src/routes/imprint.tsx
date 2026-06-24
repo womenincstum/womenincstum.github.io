@@ -47,12 +47,19 @@ function Imprint() {
 
           <div>
             <h2 className="text-lg font-semibold mb-2">Represented by</h2>
-            <p className="text-muted-foreground">The board of Women in CS @ TUM e.V.</p>
+            <p className="text-muted-foreground">
+              Alina Ignatova, Joy Chaeeun Lee, Sabrina Glatz
+            </p>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold mb-2">Contact</h2>
             <p className="text-muted-foreground">
+              Phone:{" "}
+              <a href="tel:+4917656811362" className="text-primary hover:underline">
+                +49 176 56811362
+              </a>
+              <br />
               Email:{" "}
               <a href="mailto:womenincstum@gmail.com" className="text-primary hover:underline">
                 womenincstum@gmail.com
@@ -63,36 +70,21 @@ function Imprint() {
           <div>
             <h2 className="text-lg font-semibold mb-2">Register entry</h2>
             <p className="text-muted-foreground">
-              Registered association (eingetragener Verein) — Amtsgericht München.
+              Registered association (eingetragener Verein)<br />
+              Register court: Amtsgericht München<br />
+              Register number: VR 210743
             </p>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold mb-2">
-              Responsible for content according to § 55 Abs. 2 RStV
+              Responsible for content according to § 18 Abs. 2 MStV
             </h2>
             <p className="text-muted-foreground">
-              The board of Women in CS @ TUM e.V. (address as above).
+              Alina Ignatova, Joy Chaeeun Lee, Sabrina Glatz (address as above)
             </p>
           </div>
 
-          <div>
-            <h2 className="text-lg font-semibold mb-2">Disclaimer</h2>
-            <p className="text-muted-foreground">
-              Despite careful content control, we assume no liability for the content of external
-              links. The operators of linked pages are solely responsible for their content.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-semibold mb-2">Copyright</h2>
-            <p className="text-muted-foreground">
-              The content and works on these pages created by the site operators are subject to
-              German copyright law. Duplication, processing, distribution, or any form of
-              commercialization of such material beyond the scope of copyright law shall require
-              the prior written consent of its respective author or creator.
-            </p>
-          </div>
         </div>
       </section>
 
