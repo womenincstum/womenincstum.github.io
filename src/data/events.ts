@@ -33,6 +33,32 @@ import onboarding4 from "@/assets/events/onboarding-2026-4.jpg";
 import onboarding5 from "@/assets/events/onboarding-2026-5.jpg";
 import onboarding6 from "@/assets/events/onboarding-2026-6.jpg";
 import onboarding7 from "@/assets/events/onboarding-2026-7.jpg";
+import schnupperstudium0 from "@/assets/events/schnupperstudium.jpeg";
+import schnupperstudium1 from "@/assets/events/schnupperstudium-1.jpeg";
+import schnupperstudium2 from "@/assets/events/schnupperstudium-2.jpeg";
+import schnupperstudium3 from "@/assets/events/schnupperstudium-3.jpeg";
+import schnupperstudium4 from "@/assets/events/schnupperstudium-4.jpeg";
+import schnupperstudium5 from "@/assets/events/schnupperstudium-5.jpeg";
+import eu1 from "@/assets/events/eu.jpeg";
+import eu2 from "@/assets/events/eu-2.png";
+import eu3 from "@/assets/events/eu-3.png";
+import eu4 from "@/assets/events/eu-4.png";
+import eu5 from "@/assets/events/eu-5.png";
+import utum0 from "@/assets/events/utum.jpg";
+import utum1 from "@/assets/events/utum-1.jpg";
+import utum2 from "@/assets/events/utum-2.jpg";
+import utum3 from "@/assets/events/utum-3.jpg";
+import utum4 from "@/assets/events/utum-4.jpg";
+import utum5 from "@/assets/events/utum-5.jpg";
+import utum6 from "@/assets/events/utum-6.jpg";
+import utum7 from "@/assets/events/utum-7.jpg";
+import utum8 from "@/assets/events/utum-8.jpg";
+import utum10 from "@/assets/events/utum-10.jpg";
+import utum11 from "@/assets/events/utum-11.jpg";
+import utum12 from "@/assets/events/utum-12.jpg";
+import utum13 from "@/assets/events/utum-13.jpg";
+import utum14 from "@/assets/events/utum-14.jpg";
+import utum15 from "@/assets/events/utum-15.jpg";
 
 export type EventType = "Social" | "Workshop" | "Career" | "Internal";
 
@@ -97,25 +123,10 @@ export const events: EventItem[] = [
     isoDate: "2026-06-15T09:00:00",
     location: "TUM Campus Garching",
     type: "Social",
-    description: "Help make the CS Schnupperstudium welcoming, informative, and inspiring for high school girls by sharing your experience as a TUM student.",
-    summary: `The CS Schnupperstudium is a three-day program for high school girls who are curious about Computer Science and want to experience what studying at TUM is like.
-
-From Monday, June 15 to Wednesday, June 17, 2026, the girls will visit the TUM Campus Garching and take part in lectures, workshops, campus activities, and informal exchange sessions. The program is mainly held in German and is designed for senior high school girls who are considering studying Computer Science or who simply want to get a first impression of university life.
-Throughout the three days, the participants will get to know different areas of Computer Science, meet other girls with similar interests, explore the campus, and talk to students and faculty members about studying, student life, career paths, and everyday experiences at TUM.
-
-How TUM Students Can Support Us
-We are looking for TUM students, student clubs, and volunteers who would like to help make the Schnupperstudium welcoming, informative, and inspiring.
-You can support us in different ways, for example by:
-• joining participants during Mensa hours and talking to them about student life,
-• introducing your student club or initiative,
-• sharing your personal experience as a TUM student,
-• or supporting us in any other way during the program.
-
-Your perspective can make a big difference. For many participants, talking to current students is one of the most valuable parts of the program, because it gives them an honest and personal insight into what studying Computer Science at TUM is really like.
-
-Interested in Helping?
-Please contact: ivana.peneva@tum.de`,
+    description: "High school girls got to experience what it is like studying CS at TUM — coding, a robotics lab visit, a lecture, and a panel on AI.",
+    summary: `We successfully wrapped up this year's CS Schnupperstudium. Over the course of the event, participants got a real taste of studying CS at TUM - from coding games like Tic-Tac-Toe and visiting the robotics lab at Siemens, to attending an actual algorithms lecture and joining a panel discussion on whether studying CS is still worth it in the age of AI. We're especially happy to share that many participants who were initially unsure about pursuing CS left feeling excited about it. A big thank you to everyone who made it happen and to all the participants for bringing such great energy.`,
     signupLink: "https://docs.google.com/forms/d/e/1FAIpQLSdH1WzkdNGdCsfslLADWMEEz93EsFTrNbM2Bb3n5cFUT40emw/viewform?usp=header",
+    gallery: [schnupperstudium0, schnupperstudium1, schnupperstudium2, schnupperstudium3, schnupperstudium4, schnupperstudium5],
   },
   {
     slug: "euroavia-aerospace-researchers-2026",
@@ -124,25 +135,21 @@ Please contact: ivana.peneva@tum.de`,
     isoDate: "2026-06-18T09:00:00",
     location: "Sandstraße 33, München (Tacto)",
     type: "Career",
-    description: "An event for women and gender minorities who are curious about aerospace and computer science and want to connect with professionals in the field.",
-    summary: `An event for women and gender minorities who are curious about aerospace and computer science and want to connect with professionals in the field.
-
-We will meet at Sandstrasse 33 (at the Tacto office) for an inspiring morning of talks, personal stories, and an open Q&A. Organized by EUROAVIA Munich and Women in Computer Science, the event brings you face-to-face with three researchers from DLR and the Max Planck Institute of Biochemistry.
-
-Throughout the event, you will get to hear about their career journeys, learn about their current research projects, and ask your own questions. It is a great opportunity to meet like-minded peers, discover exciting career paths, and chat with researchers about their everyday experiences in science and engineering.`,
+    description: "A panel with EUROAVIA München featuring researchers from DLR, Max Planck Institute, and WIA-E Munich on aerospace, ML, and building careers in STEM.",
+    summary: `We partnered with EUROAVIA München for our Meet the Researchers panel, bringing together researchers and professionals working at the intersection of aerospace, machine learning, and innovation. Our speakers - Amita Shrestha (DLR), Juliette Murris (Max Planck Institute), Cécile Deprez (DLR), and Arti Dhole (WIA-E Munich & SpaceBrewery) shared not only their cutting-edge research in areas like optical satellite communication, protein language models, and the Galileo satellite constellation, but also the personal journeys behind it. The evening was full of lessons on visibility, mentorship, and owning your expertise: a reminder that you don't have to know everything to belong in research, but you do have to raise your hand. A huge thank you to our speakers and to everyone who joined the discussion.`,
     signupLink: "https://luma.com/ahzx26pj",
     href: "https://www.euroavia-muenchen.de/en/front-page/",
     partners: [{ name: "EUROAVIA Munich", logo: euroaviaLogo, website: "https://www.euroavia-muenchen.de/en/front-page/" }],
+    gallery: [eu1, eu2, eu3, eu4, eu5],
   },
   {
     slug: "summer-party-2026",
     title: "Summer Party",
-    date: "July 2026",
-    isoDate: "2026-07-28T18:00:00",
+    date: "September 5, 2026",
+    isoDate: "2026-09-05T18:00:00",
     location: "Munich",
-    type: "Social",
+    type: "Internal",
     description: "A social to wrap up the semester and celebrate what we've accomplished over the past months.",
-    signupNote: "More information and signup coming soon.",
   },
   {
     slug: "women-in-venture-startups-2026",
@@ -151,12 +158,10 @@ Throughout the event, you will get to hear about their career journeys, learn ab
     isoDate: "2026-07-01T18:00:00",
     location: "StudiTUM Garching, Lichtenbergstr. 3",
     type: "Workshop",
-    description: "Looking to dive into entrepreneurship, pick up some practical skills, and connect with inspiring women from the startup ecosystem?",
-    summary: `Looking to dive into entrepreneurship, pick up some practical skills, and connect with inspiring women from the startup ecosystem?
-
-We're hosting an evening for women in STEM who are curious about startups and actually building things. “Women Who Build: An Evening of Stories & Skills” is a hands-on workshop in collaboration with UnternehmerTUM for Innovators, with real tools, honest stories from women founders who started from scratch, and space to connect with people on the same path. Spots are limited so grab yours early. Register via https://lnkd.in/dUmT2UBi.
-`,
+    description: "A founder talk, design sprint, and real talk on building with UnternehmerTUM - featuring speakers from Pollyn and The Munich Spirit.",
+    summary: `We hosted "Women who Built" with UnternehmerTUM, an evening of founder talks, hands-on building, and real talk about what it takes to start something. Sena Alemdar (Co-founder & CTO, Pollyn) kicked things off with her journey from full-stack developer to EXIST-funded founder building an AI early-warning system for teams - no sugarcoating, just honest lessons on finding problems worth solving. Then came the chaos: 45 minutes, 3-person teams, one brief, and a full Double Diamond sprint with nothing but paper and a timer. Alejandra Melendez (The Munich Spirit) closed the night with a grounding reminder that consistency beats virality and you don't need permission to start. To everyone who showed up, pitched an idea in 60 seconds flat, and stayed for the networking - thank you.`,
     signupLink: "https://lnkd.in/dUmT2UBi",
+    gallery: [utum0, utum1, utum2, utum3, utum4, utum5, utum6, utum7, utum8, utum10, utum11, utum12, utum13, utum14, utum15],
   },
   {
     slug: "jetbrains-dev-tools-2026",
