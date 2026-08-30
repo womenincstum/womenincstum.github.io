@@ -43,6 +43,10 @@ function Landing() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-5 pt-12 pb-20 lg:pt-20 lg:pb-28 grid xl:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div>
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+              <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
+              Our next recruiting round starts in October 2026. Stay tuned!
+            </div>
             <AnimatedHeadline />
             <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-5xl">
               We build a supportive community for women to connect, share knowledge, and grow

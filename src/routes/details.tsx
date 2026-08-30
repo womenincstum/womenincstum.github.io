@@ -8,7 +8,6 @@ import sofiiaImg from "@/assets/members/sofiia.jpg";
 import sarraImg from "@/assets/members/sarra.png";
 import maissaImg from "@/assets/members/maissa.jpg";
 import anastasiiaImg from "@/assets/members/anastasiia.png";
-import rimaImg from "@/assets/members/rima.jpg";
 import alinaImg from "@/assets/members/alina.jpg";
 
 import ivanaImg from "@/assets/members/ivana.jpg";
@@ -43,23 +42,15 @@ const board: Person[] = [
 const activeMembers: Person[] = [
   { name: "Ivana Peneva", photo: ivanaImg },
   { name: "Alina Ignatova", photo: alinaImg },
-  { name: "Rima Neji", photo: rimaImg },
   { name: "Anastasiia Korzhylova", photo: anastasiiaImg },
   { name: "Maissa Nouicer", photo: maissaImg },
   { name: "Sarra Ouertani", photo: sarraImg },
   { name: "Evelina Bublyk", photo: evelinaImg },
   { name: "Jana Brade" },
-  { name: "Jialu Cheng" },
   { name: "Nora Paul" },
   { name: "Chrissa Philip" },
   { name: "Milena Ryzner" },
-  { name: "Yaroslava Melnyk" },
-  { name: "Anya" },
-  { name: "Heidi Albarazi" },
-  { name: "Nitika Chivte" },
   { name: "Anna Engel" },
-  { name: "Izdihar Farahdina" },
-  { name: "Didem Nur Ayaroglu" },
 ];
 
 type Alum = { name: string; role?: string; years?: string };
