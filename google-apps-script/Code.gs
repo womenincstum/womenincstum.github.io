@@ -207,18 +207,17 @@ function verifyCode(email, userCode) {
 }
 
 /**
- * Reads the active WhatsApp invite URL from the "Config" sheet.
- * If the sheet doesn't exist yet, it automatically initializes it.
+ * Reads the active WhatsApp invite URL from the "Config" sheet tab.
+ * If the sheet tab does not exist, it creates it with empty template rows.
  */
 function getCommunityInviteUrl(ss) {
-  var DEFAULT_URL = "https://chat.whatsapp.com/BSPhLQLsJYWExZ7VeNWOb6";
   try {
     var configSheet = ss.getSheetByName("Config");
     if (!configSheet) {
       configSheet = ss.insertSheet("Config");
       configSheet.appendRow(["Key", "Value"]);
-      configSheet.appendRow(["WhatsAppURL", DEFAULT_URL]);
-      return DEFAULT_URL;
+      configSheet.appendRow(["WhatsAppURL", ""]);
+      return "";
     }
 
     var data = configSheet.getDataRange().getValues();
@@ -232,7 +231,7 @@ function getCommunityInviteUrl(ss) {
       }
     }
   } catch (err) {
-    // Return default URL on any error
+    Logger.log("Error reading Config sheet: " + err);
   }
-  return DEFAULT_URL;
+  return "";
 }
