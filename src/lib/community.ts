@@ -70,17 +70,14 @@ export async function requestVerificationCode(
     };
   }
 
-  if (!normalizedEmail.endsWith("@tum.de")) {
-    if (normalizedEmail.endsWith("@mytum.de")) {
-      return {
-        success: false,
-        message:
-          "Please use your primary @tum.de email address (e.g. name@tum.de) to receive the code.",
-      };
-    }
+  if (
+    !normalizedEmail.endsWith("@tum.de") &&
+    !normalizedEmail.endsWith("@mytum.de")
+  ) {
     return {
       success: false,
-      message: "Please enter a valid TUM email address ending with @tum.de.",
+      message:
+        "Please enter an official TUM email address ending with @tum.de or @mytum.de.",
     };
   }
 
