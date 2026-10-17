@@ -1,9 +1,8 @@
 import { createFileRoute, Link, Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight, Calendar, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { TumAuthDialog } from "@/components/TumAuthDialog";
 import { events, eventTypes, type EventType } from "@/data/events";
 
 type TimeFilter = "upcoming" | "past";
@@ -210,22 +209,6 @@ function EventsIndex() {
                     <p className="flex items-center gap-2">
                       <MapPin size={14} /> {e.location}
                     </p>
-                    {!isPast && e.signupNote && (
-                      <TumAuthDialog
-                        trigger={
-                          <button
-                            type="button"
-                            onClick={(ev) => {
-                              ev.preventDefault();
-                              ev.stopPropagation();
-                            }}
-                            className="inline-flex items-center gap-1.5 text-primary hover:underline font-medium text-left cursor-pointer"
-                          >
-                            <MessageCircle size={14} /> Join WhatsApp community for updates
-                          </button>
-                        }
-                      />
-                    )}
                   </div>
                 </Link>
               );
