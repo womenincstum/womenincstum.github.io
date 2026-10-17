@@ -241,7 +241,7 @@ export function TumAuthDialog({
                 />
               </div>
               <p className="text-xs text-muted-foreground">
-                We'll send an automated 6-digit access code from our official club account (<span className="text-foreground font-medium">womenincstum@gmail.com</span>). No personal data is stored.
+                We'll send an automated 6-digit access code from our official club account (<span className="text-foreground font-medium">womenincstum@gmail.com</span>).
               </p>
             </div>
 
@@ -300,7 +300,7 @@ export function TumAuthDialog({
                 <span className="truncate">Sent to <strong className="text-foreground">{email}</strong></span>
               </div>
               <p className="text-xs text-muted-foreground">
-                Check your TUM inbox and spam folder for an email from <strong>Women in CS @ TUM (No-Reply)</strong>.
+                Check your TUM inbox and spam folder for an email from <strong>Women in CS @ TUM</strong>.
               </p>
 
               <div className="flex justify-center py-2">
