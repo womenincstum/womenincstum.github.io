@@ -7,6 +7,7 @@
  * Requirements in Google Sheets:
  * 1. Sheet tab named "Codes" with headers: [Email, Code, Timestamp]
  * 2. Sheet tab named "Log" with headers: [Email, Timestamp]
+ * 3. Sheet tab named "Config" with headers: [Key, Value]
  */
 
 function doGet(e) {
@@ -214,9 +215,6 @@ function getCommunityInviteUrl(ss) {
   try {
     var configSheet = ss.getSheetByName("Config");
     if (!configSheet) {
-      configSheet = ss.insertSheet("Config");
-      configSheet.appendRow(["Key", "Value"]);
-      configSheet.appendRow(["WhatsAppURL", ""]);
       return "";
     }
 
