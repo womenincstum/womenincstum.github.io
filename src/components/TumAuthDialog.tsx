@@ -210,7 +210,7 @@ export function TumAuthDialog({
           <DialogDescription className="text-muted-foreground text-sm">
             {step === "verified"
               ? "Your TUM student verification is active. Click below to join the official WhatsApp group."
-              : "To protect our community from spam and unverified accounts, please authenticate with your TUM student email address."}
+              : "To protect our community from spam and unverified accounts, please authenticate with your TUM email address."}
           </DialogDescription>
         </DialogHeader>
 
