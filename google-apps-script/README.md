@@ -1,4 +1,4 @@
-# TUM Email Verification & WhatsApp Community Integration
+# TUM Email Verification for WhatsApp Community
 
 This directory contains the Google Apps Script backend code that enables the TUM email verification functionality.
 
