@@ -7,7 +7,7 @@ import sabrinaImg from "@/assets/members/sabrina.jpg";
 import sofiiaImg from "@/assets/members/sofiia.jpg";
 import sarraImg from "@/assets/members/sarra.png";
 import maissaImg from "@/assets/members/maissa.jpg";
-import anastasiiaImg from "@/assets/members/anastasiia.png";
+import anastasiiaImg from "@/assets/members/anastasiia.jpg";
 import alinaImg from "@/assets/members/alina.jpg";
 
 import ivanaImg from "@/assets/members/ivana.jpg";
