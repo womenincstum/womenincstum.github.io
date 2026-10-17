@@ -95,22 +95,31 @@ export async function requestVerificationCode(
     };
   }
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 12000);
+
   try {
     const url = `${COMMUNITY_CONFIG.scriptUrl}?action=sendCode&email=${encodeURIComponent(normalizedEmail)}`;
-    const res = await fetch(url);
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+
     if (!res.ok) {
       return {
         success: false,
-        message: `Verification service returned error (${res.status}). Please try again.`,
+        message: `Verification service returned error (${res.status}). Please try again later.`,
       };
     }
     const data = await res.json();
     return data;
-  } catch (err) {
+  } catch (err: unknown) {
+    clearTimeout(timeoutId);
     console.error("Failed to send verification code", err);
+    const isTimeout = err instanceof Error && err.name === "AbortError";
     return {
       success: false,
-      message: "Network error connecting to verification service. Please try again.",
+      message: isTimeout
+        ? "Verification service timed out. The Google Apps Script backend has not been deployed/authorized yet in Google Drive."
+        : "Network error connecting to verification service. Please try again.",
     };
   }
 }
@@ -139,13 +148,18 @@ export async function verifyAccessCode(
     return { success: false, message: "Email and code are required." };
   }
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 12000);
+
   try {
     const url = `${COMMUNITY_CONFIG.scriptUrl}?action=verifyCode&email=${encodeURIComponent(normalizedEmail)}&code=${encodeURIComponent(normalizedCode)}`;
-    const res = await fetch(url);
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+
     if (!res.ok) {
       return {
         success: false,
-        message: `Verification service returned error (${res.status}). Please try again.`,
+        message: `Verification service returned error (${res.status}). Please try again later.`,
       };
     }
     const data = await res.json();
@@ -153,11 +167,15 @@ export async function verifyAccessCode(
       setTumVerified(normalizedEmail, data.whatsappUrl);
     }
     return data;
-  } catch (err) {
+  } catch (err: unknown) {
+    clearTimeout(timeoutId);
     console.error("Failed to verify access code", err);
+    const isTimeout = err instanceof Error && err.name === "AbortError";
     return {
       success: false,
-      message: "Network error connecting to verification service. Please try again.",
+      message: isTimeout
+        ? "Verification service timed out. Please try again."
+        : "Network error connecting to verification service. Please try again.",
     };
   }
 }
