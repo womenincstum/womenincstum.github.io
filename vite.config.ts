@@ -13,7 +13,7 @@ export default defineConfig({
     environments: {
       client: {
         build: {
-          outDir: "docs",
+          outDir: "dist/client",
         },
       },
     },
