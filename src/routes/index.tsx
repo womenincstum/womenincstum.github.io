@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "A community for women in computer science at TUM." },
     ],
     links: [
-      { rel: "preload", as: "image", href: heroImg1200, fetchpriority: "high" } as unknown as { rel: string; href: string },
+      { rel: "preload", as: "image", href: heroImg1200, fetchPriority: "high" } as unknown as { rel: string; href: string },
     ],
   }),
 });
