@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Dialog,
   DialogContent,
@@ -67,6 +67,7 @@ export function TumAuthDialog({
   const [resendCooldown, setResendCooldown] = useState(0);
   const [copied, setCopied] = useState(false);
   const [verifiedEmail, setVerifiedEmail] = useState<string | null>(null);
+  const verifyingRef = useRef(false);
 
   // Sync initial verification status
   useEffect(() => {
@@ -102,14 +103,8 @@ export function TumAuthDialog({
       return;
     }
 
-    if (!cleanEmail.endsWith("@tum.de")) {
-      if (cleanEmail.endsWith("@mytum.de")) {
-        setErrorMessage(
-          "Please use your primary @tum.de email (e.g. name@tum.de) to receive the code.",
-        );
-      } else {
-        setErrorMessage("Please use an official TUM email address ending with @tum.de.");
-      }
+    if (!cleanEmail.endsWith("@tum.de") && !cleanEmail.endsWith("@mytum.de")) {
+      setErrorMessage("Please use an official TUM email address ending with @tum.de or @mytum.de.");
       return;
     }
 
@@ -132,33 +127,38 @@ export function TumAuthDialog({
     }
   };
 
-  const handleVerifyCode = async (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
-    setErrorMessage(null);
-
-    const cleanCode = code.trim();
+  const executeVerification = async (targetCode: string) => {
+    const cleanCode = targetCode.trim();
     if (cleanCode.length !== 6) {
       setErrorMessage("Please enter the complete 6-digit verification code.");
       return;
     }
 
+    if (verifyingRef.current || loading) return;
+    verifyingRef.current = true;
     setLoading(true);
+    setErrorMessage(null);
+
     try {
       const res = await verifyAccessCode(email, cleanCode);
       if (res.success) {
         setStep("verified");
         setVerifiedEmail(email.trim().toLowerCase());
-        toast.success("TUM affiliation verified!", {
-          description: "Welcome to the Women in CS @ TUM WhatsApp Community.",
-        });
+        toast.success("TUM affiliation verified!");
       } else {
         setErrorMessage(res.message || "Invalid or expired code. Please try again.");
       }
     } catch {
       setErrorMessage("Verification failed. Please check your connection and try again.");
     } finally {
+      verifyingRef.current = false;
       setLoading(false);
     }
+  };
+
+  const handleVerifyCode = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    await executeVerification(code);
   };
 
   const handleCopyLink = async () => {
@@ -231,7 +231,7 @@ export function TumAuthDialog({
                 />
               </div>
               <p className="text-xs text-muted-foreground">
-                We'll send a one-time 6-digit access code to this address. No personal data is stored.
+                We'll send an automated 6-digit access code from our official club account (<span className="text-foreground font-medium">womenincstum@gmail.com</span>). No personal data is stored.
               </p>
             </div>
 
@@ -289,6 +289,9 @@ export function TumAuthDialog({
               <div className="p-2.5 rounded-xl bg-primary/5 border border-primary/10 text-xs text-muted-foreground flex items-center justify-between">
                 <span className="truncate">Sent to <strong className="text-foreground">{email}</strong></span>
               </div>
+              <p className="text-xs text-muted-foreground">
+                Check your TUM inbox and spam folder for an email from <strong>Women in CS @ TUM (No-Reply)</strong>.
+              </p>
 
               <div className="flex justify-center py-2">
                 <InputOTP
@@ -298,18 +301,7 @@ export function TumAuthDialog({
                     setCode(val);
                     if (errorMessage) setErrorMessage(null);
                     if (val.length === 6) {
-                      // Trigger submit automatically on 6th digit
-                      setTimeout(() => {
-                        verifyAccessCode(email, val).then((res) => {
-                          if (res.success) {
-                            setStep("verified");
-                            setVerifiedEmail(email.trim().toLowerCase());
-                            toast.success("TUM affiliation verified!");
-                          } else {
-                            setErrorMessage(res.message || "Invalid code. Please try again.");
-                          }
-                        });
-                      }, 100);
+                      executeVerification(val);
                     }
                   }}
                 >
