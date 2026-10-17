@@ -10,12 +10,33 @@ This directory contains the Google Apps Script backend used by the Women in CS @
 2. **Code Verification (`action=verifyCode`)**:
    - The user enters the 6-digit code received in their email.
    - The script checks if the code matches and was issued within the last 10 minutes.
-   - If verified, it records a success log in the `Log` tab and returns `{ success: true }`.
-   - The frontend unlocks the WhatsApp community link and saves the authenticated status in `localStorage` for a frictionless session.
+   - If verified, it records a success log in the `Log` tab and returns:
+     ```json
+     {
+       "success": true,
+       "whatsappUrl": "https://chat.whatsapp.com/..."
+     }
+     ```
+   - The frontend unlocks the WhatsApp community link dynamically and stores the authenticated session in `localStorage`.
+
+## 🔄 Dynamic WhatsApp Invite Link in Google Sheets
+
+The script automatically manages your WhatsApp invite link dynamically from a **`Config`** tab in the Google Spreadsheet:
+
+1. In your Google Sheet, there is a tab named **`Config`** with two columns:
+   | Key | Value |
+   | :--- | :--- |
+   | `WhatsAppURL` | `https://chat.whatsapp.com/BSPhLQLsJYWExZ7VeNWOb6` |
+2. *(Auto-initialization)*: If the `Config` tab does not exist when the script runs, it creates it automatically with the current link.
+3. **Rotating/Resetting the link**:
+   Whenever club admins reset the invite link in WhatsApp:
+   - Open the Google Spreadsheet.
+   - Update the URL cell in the `Config` tab.
+   - **Done!** The website immediately serves the new link to all newly verified students without needing any code edits, git commits, or website redeployments.
 
 ## Updating the Deployed Google Apps Script
 
-To update the live script with the new HTML email template and no-reply format:
+To update the live script with the new HTML email template and dynamic WhatsApp URL:
 
 1. Open the Google Spreadsheet in your club Google Drive (`womenincstum@gmail.com`).
 2. Go to **Extensions > Apps Script**.
@@ -24,7 +45,7 @@ To update the live script with the new HTML email template and no-reply format:
 5. Select the active Web App deployment, click the **Edit** (pencil) icon:
    - Change **Version** to: **New Version**
    - Click **Deploy**.
-6. The existing URL remains unchanged, and all new verification emails will immediately use the updated HTML template!
+6. The existing URL remains unchanged, and all future verifications will immediately use the updated features!
 
 ## How Sender Email Addresses Work in Google Apps Script
 
@@ -33,5 +54,5 @@ To update the live script with the new HTML email template and no-reply format:
 * **Using an official `@tum.de` address**:
   If the club possesses an official TUM functional mailbox (e.g., `wincs@tum.de`):
   1. In the `womenincstum@gmail.com` account, go to **Settings > Accounts and Import > Send mail as**.
-  2. Add `wincs@tum.de` as an alias using TUM's SMTP server (`postweb.lrz.de` / `mail.tum.de`).
+  2. Add `wincs@tum.de` as an alias using TUM's SMTP server (`mail.tum.de`).
   3. Once confirmed, you can update `sendEmail` in `Code.gs` to send using the alias.

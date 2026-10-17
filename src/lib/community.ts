@@ -1,5 +1,4 @@
 export const COMMUNITY_CONFIG = {
-  whatsappUrl: "https://chat.whatsapp.com/BSPhLQLsJYWExZ7VeNWOb6",
   scriptUrl:
     "https://script.google.com/macros/s/AKfycbwUHrir0OPa6X10oy6q4wsds_tT2_iIUpuZsMGPgQs6v3GWm8AJYM482G7AF4vTeEn7/exec",
   storageKey: "wincs_tum_verified",
@@ -29,7 +28,19 @@ export function getVerifiedEmail(): string | null {
   }
 }
 
-export function setTumVerified(email: string): void {
+export function getVerifiedWhatsappUrl(): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = localStorage.getItem(COMMUNITY_CONFIG.storageKey);
+    if (!stored) return null;
+    const parsed = JSON.parse(stored);
+    return typeof parsed?.whatsappUrl === "string" ? parsed.whatsappUrl : null;
+  } catch {
+    return null;
+  }
+}
+
+export function setTumVerified(email: string, whatsappUrl?: string): void {
   if (typeof window === "undefined") return;
   try {
     localStorage.setItem(
@@ -37,6 +48,7 @@ export function setTumVerified(email: string): void {
       JSON.stringify({
         verified: true,
         email,
+        whatsappUrl: whatsappUrl || "",
         verifiedAt: new Date().toISOString(),
       }),
     );
@@ -59,15 +71,17 @@ export async function requestVerificationCode(
 ): Promise<{ success: boolean; message?: string }> {
   const normalizedEmail = email.trim().toLowerCase();
 
-  // Test bypass for local development & demonstration
-  if (
-    normalizedEmail === "test@tum.de" ||
-    (import.meta.env.DEV && normalizedEmail.endsWith("@test.tum.de"))
-  ) {
-    return {
-      success: true,
-      message: "Test mode: Use verification code 123456",
-    };
+  // Test bypass ONLY in local development (Vite completely strips this block during production build)
+  if (import.meta.env.DEV) {
+    if (
+      normalizedEmail === "test@tum.de" ||
+      normalizedEmail.endsWith("@test.tum.de")
+    ) {
+      return {
+        success: true,
+        message: "Test mode: Use verification code 123456",
+      };
+    }
   }
 
   if (
@@ -104,18 +118,21 @@ export async function requestVerificationCode(
 export async function verifyAccessCode(
   email: string,
   code: string,
-): Promise<{ success: boolean; message?: string }> {
+): Promise<{ success: boolean; message?: string; whatsappUrl?: string }> {
   const normalizedEmail = email.trim().toLowerCase();
   const normalizedCode = code.trim();
 
-  // Test bypass for local development & demonstration
-  if (
-    (normalizedEmail === "test@tum.de" ||
-      (import.meta.env.DEV && normalizedEmail.endsWith("@test.tum.de"))) &&
-    normalizedCode === "123456"
-  ) {
-    setTumVerified(normalizedEmail);
-    return { success: true };
+  // Test bypass ONLY in local development (Vite completely strips this block during production build)
+  if (import.meta.env.DEV) {
+    if (
+      (normalizedEmail === "test@tum.de" ||
+        normalizedEmail.endsWith("@test.tum.de")) &&
+      normalizedCode === "123456"
+    ) {
+      const devMockUrl = "https://chat.whatsapp.com/DEV_TEST_COMMUNITY";
+      setTumVerified(normalizedEmail, devMockUrl);
+      return { success: true, whatsappUrl: devMockUrl };
+    }
   }
 
   if (!normalizedEmail || !normalizedCode) {
@@ -132,8 +149,8 @@ export async function verifyAccessCode(
       };
     }
     const data = await res.json();
-    if (data.success) {
-      setTumVerified(normalizedEmail);
+    if (data.success && data.whatsappUrl) {
+      setTumVerified(normalizedEmail, data.whatsappUrl);
     }
     return data;
   } catch (err) {

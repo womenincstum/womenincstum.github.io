@@ -16,9 +16,9 @@ import {
 } from "@/components/ui/input-otp";
 import { toast } from "sonner";
 import {
-  COMMUNITY_CONFIG,
   isTumVerified,
   getVerifiedEmail,
+  getVerifiedWhatsappUrl,
   requestVerificationCode,
   verifyAccessCode,
   clearTumVerified,
@@ -67,6 +67,7 @@ export function TumAuthDialog({
   const [resendCooldown, setResendCooldown] = useState(0);
   const [copied, setCopied] = useState(false);
   const [verifiedEmail, setVerifiedEmail] = useState<string | null>(null);
+  const [whatsappUrl, setWhatsappUrl] = useState<string>("");
   const verifyingRef = useRef(false);
 
   // Sync initial verification status
@@ -76,6 +77,7 @@ export function TumAuthDialog({
       if (verified) {
         setStep("verified");
         setVerifiedEmail(getVerifiedEmail());
+        setWhatsappUrl(getVerifiedWhatsappUrl() || "");
       } else {
         setStep("email");
         setCode("");
@@ -144,6 +146,9 @@ export function TumAuthDialog({
       if (res.success) {
         setStep("verified");
         setVerifiedEmail(email.trim().toLowerCase());
+        if (res.whatsappUrl) {
+          setWhatsappUrl(res.whatsappUrl);
+        }
         toast.success("TUM affiliation verified!");
       } else {
         setErrorMessage(res.message || "Invalid or expired code. Please try again.");
@@ -162,8 +167,12 @@ export function TumAuthDialog({
   };
 
   const handleCopyLink = async () => {
+    if (!whatsappUrl) {
+      toast.error("Invite link is not available yet.");
+      return;
+    }
     try {
-      await navigator.clipboard.writeText(COMMUNITY_CONFIG.whatsappUrl);
+      await navigator.clipboard.writeText(whatsappUrl);
       setCopied(true);
       toast.success("Invite link copied to clipboard!");
       setTimeout(() => setCopied(false), 2500);
@@ -178,6 +187,7 @@ export function TumAuthDialog({
     setEmail("");
     setCode("");
     setVerifiedEmail(null);
+    setWhatsappUrl("");
     setErrorMessage(null);
     toast.info("Verification reset. You can now verify a new email.");
   };
@@ -372,32 +382,45 @@ export function TumAuthDialog({
               </div>
             </div>
 
-            <div className="space-y-3">
-              <a
-                href={COMMUNITY_CONFIG.whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground h-12 px-6 font-semibold hover:opacity-90 transition shadow-lg shadow-primary/25 text-base cursor-pointer"
-              >
-                <MessageCircle size={18} /> Join WhatsApp Community <ExternalLink size={15} />
-              </a>
+            {whatsappUrl ? (
+              <div className="space-y-3">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground h-12 px-6 font-semibold hover:opacity-90 transition shadow-lg shadow-primary/25 text-base cursor-pointer"
+                >
+                  <MessageCircle size={18} /> Join WhatsApp Community <ExternalLink size={15} />
+                </a>
 
-              <button
-                type="button"
-                onClick={handleCopyLink}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-full glass h-11 px-5 font-medium hover:border-primary/40 transition text-sm text-foreground cursor-pointer"
-              >
-                {copied ? (
-                  <>
-                    <Check size={16} className="text-green-400" /> Link copied!
-                  </>
-                ) : (
-                  <>
-                    <Copy size={16} /> Copy invite link
-                  </>
-                )}
-              </button>
-            </div>
+                <button
+                  type="button"
+                  onClick={handleCopyLink}
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full glass h-11 px-5 font-medium hover:border-primary/40 transition text-sm text-foreground cursor-pointer"
+                >
+                  {copied ? (
+                    <>
+                      <Check size={16} className="text-green-400" /> Link copied!
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={16} /> Copy invite link
+                    </>
+                  )}
+                </button>
+              </div>
+            ) : (
+              <div className="p-3.5 rounded-xl bg-destructive/10 border border-destructive/20 text-destructive text-xs text-center space-y-2">
+                <p>The invite link is not currently available in this session.</p>
+                <button
+                  type="button"
+                  onClick={handleResetVerification}
+                  className="text-primary underline font-medium cursor-pointer"
+                >
+                  Click here to re-verify
+                </button>
+              </div>
+            )}
 
             <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-muted-foreground">
               <span>Verified student session</span>
