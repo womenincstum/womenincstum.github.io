@@ -170,9 +170,14 @@ function Landing() {
             <p className="mt-2 text-sm text-muted-foreground flex-1">
               Join the team behind the scenes - organize events, shape our programs, and grow with motivated women in tech.
             </p>
-            <div className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary/15 text-primary px-5 py-3 font-semibold text-center">
-              Applications are now closed—see you in WiSe 26/27
-            </div>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd0VstaqYs27ZhucT6dsa4JVS_Hbc0Spegcm4b5uaSGPwJhvQ/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-3 font-semibold text-center hover:opacity-90 transition"
+            >
+              Apply now — deadline Nov 7
+            </a>
           </div>
 
           <div id="opportunities" className="glass rounded-3xl p-7 flex flex-col">
