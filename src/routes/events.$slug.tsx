@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, MapPin, MessageCircle, Tag } from "lucide-react";
 import { Fragment, type ReactNode } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { TumAuthDialog } from "@/components/TumAuthDialog";
 import { events, type EventPartner } from "@/data/events";
 
 // Words inside a summary/description that should become inline links to the event's href
@@ -10,7 +11,7 @@ const LINKABLE_TERMS: Record<string, string[]> = {
   "euroavia-aerospace-researchers-2026": ["EUROAVIA"],
 };
 
-const URL_PATTERN = /(https?:\/\/[^\s<]+[^\s<.,;:!?')\]\}])/g;
+const URL_PATTERN = /(https?:\/\/[^\s<]+[^\s<.,;:!?')\]}])/g;
 
 function renderWithLinks(text: string, href?: string, terms?: string[]): ReactNode {
   const segments = text.split(URL_PATTERN);
@@ -230,14 +231,16 @@ function EventDetailPage() {
           )}
 
           {!isPast && event.signupNote && !event.signupLink && (
-            <a
-              href="https://chat.whatsapp.com/BSPhLQLsJYWExZ7VeNWOb6"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-medium text-green-400 hover:bg-green-500/20 transition"
-            >
-              <MessageCircle size={16} /> Join our WhatsApp community for updates
-            </a>
+            <TumAuthDialog
+              trigger={
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm font-medium text-green-400 hover:bg-green-500/20 transition cursor-pointer"
+                >
+                  <MessageCircle size={16} /> Join our WhatsApp community for updates
+                </button>
+              }
+            />
           )}
         </div>
 

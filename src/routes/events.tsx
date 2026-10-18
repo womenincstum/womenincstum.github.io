@@ -1,6 +1,6 @@
 import { createFileRoute, Link, Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight, Calendar, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { events, eventTypes, type EventType } from "@/data/events";
@@ -209,16 +209,6 @@ function EventsIndex() {
                     <p className="flex items-center gap-2">
                       <MapPin size={14} /> {e.location}
                     </p>
-                    {!isPast && e.signupNote && (
-                      <a
-                        href="https://chat.whatsapp.com/BSPhLQLsJYWExZ7VeNWOb6"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 text-primary hover:underline font-medium"
-                      >
-                        <MessageCircle size={14} /> Join WhatsApp community for updates
-                      </a>
-                    )}
                   </div>
                 </Link>
               );
