@@ -185,6 +185,9 @@ function verifyCode(email, userCode) {
       }
       logSheet.appendRow([incomingEmail, new Date()]);
 
+      // Invalidate the used code so it cannot be replayed
+      sheet.deleteRow(i + 1);
+
       // Read dynamic WhatsApp invite URL from "Config" sheet tab
       var whatsappUrl = getCommunityInviteUrl(ss);
 
