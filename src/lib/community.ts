@@ -34,7 +34,8 @@ export function getVerifiedWhatsappUrl(): string | null {
     const stored = localStorage.getItem(COMMUNITY_CONFIG.storageKey);
     if (!stored) return null;
     const parsed = JSON.parse(stored);
-    return typeof parsed?.whatsappUrl === "string" ? parsed.whatsappUrl : null;
+    const url = parsed?.whatsappUrl;
+    return typeof url === "string" && url.startsWith("https://chat.whatsapp.com/") ? url : null;
   } catch {
     return null;
   }
@@ -163,7 +164,7 @@ export async function verifyAccessCode(
       };
     }
     const data = await res.json();
-    if (data.success && data.whatsappUrl) {
+    if (data.success) {
       setTumVerified(normalizedEmail, data.whatsappUrl);
     }
     return data;

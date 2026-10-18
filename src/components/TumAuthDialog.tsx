@@ -146,7 +146,7 @@ export function TumAuthDialog({
       if (res.success) {
         setStep("verified");
         setVerifiedEmail(email.trim().toLowerCase());
-        if (res.whatsappUrl) {
+        if (res.whatsappUrl?.startsWith("https://chat.whatsapp.com/")) {
           setWhatsappUrl(res.whatsappUrl);
         }
         toast.success("TUM affiliation verified!");
