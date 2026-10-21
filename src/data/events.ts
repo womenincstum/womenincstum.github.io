@@ -59,6 +59,10 @@ import utum12 from "@/assets/events/utum-12.jpg";
 import utum13 from "@/assets/events/utum-13.jpg";
 import utum14 from "@/assets/events/utum-14.jpg";
 import utum15 from "@/assets/events/utum-15.jpg";
+import rhl2025_1 from "../assets/events/rhl-2025-1.jpeg";
+import rhl2025_2 from "../assets/events/rhl-2025-2.jpeg";
+import rhl2025_3 from "../assets/events/rhl-2025-3.jpeg";
+import rhl2025_4 from "../assets/events/rhl-2025-4.jpeg";
 
 export type EventType = "Social" | "Workshop" | "Career" | "Internal";
 
@@ -116,7 +120,31 @@ const stock = {
 
 export const events: EventItem[] = [
   // ===== Upcoming =====x
+
   {
+    slug: "info-night-WS2026/27",
+    title: "Info Night - Get to know us!",
+    date: "October 26, 2026 · 18:00",
+    isoDate: "2026-10-26T18:00:00",
+    location: "StudiTUM Garching, Room: 5532.EG.002",
+    type: "Social",
+    description: "Meet our team, enjoy games, tea and hot chocolate, and connect with other women in your field.",
+    summary: "Join Women in CS @ TUM for a cozy Info Night! Meet our team, enjoy games, tea and hot chocolate, and connect with other women in computer science. Come hang out and get to know our community! Sign up above ⬆",
+    signupLink: "https://luma.com/sysa4t7j",
+  },
+  {
+    slug: "ITCS-2026",
+    title: "ITCS Job Fair",
+    date: "October 30, 2026 · 9:30-16:00",
+    isoDate: "2026-10-30T9:30:00",
+    location: "MOC Event Center, Halle 3, Lilienthalallee 40, 80939 München",
+    type: "Career",
+    description: "Connect with tech companies and discover new career paths at the ITCS Job Fair!",
+    summary: "Join us at the ITCS Job Fair! Explore exciting career opportunities in tech, meet potential employers, discover internships and job openings, and connect with professionals from the industry. A great chance to network and take the next step in your career!",
+    signupNote: "More information coming soon",
+  },
+  // ===== Past =====
+    {
     slug: "support-tum-cs-schnupperstudium-2026",
     title: "CS Schnupperstudium for High School Girls",
     date: "June 15–17, 2026",
@@ -163,20 +191,6 @@ export const events: EventItem[] = [
     signupLink: "https://lnkd.in/dUmT2UBi",
     gallery: [utum0, utum1, utum2, utum3, utum4, utum5, utum6, utum7, utum8, utum10, utum11, utum12, utum13, utum14, utum15],
   },
-  {
-    slug: "jetbrains-dev-tools-2026",
-    title: "Career Workshop with JetBrains",
-    date: "October 21, 2026 · 18:00",
-    isoDate: "2026-10-21T18:00:00",
-    location: "JetBrains Office, Munich",
-    type: "Career",
-    description: "Join us for a Career Workshop with JetBrains. More information will follow soon — join our WhatsApp community to stay informed!",
-    summary: "Join us for a Career Workshop with JetBrains. More information and the detailed agenda will follow soon. In the meantime, join our WhatsApp community to stay informed!",
-    signupNote: "More information coming soon.",
-    partners: [{ name: "JetBrains", logo: jetbrainsLogo, website: "https://www.jetbrains.com/" }],
-  },
-
-  // ===== Past =====
   {
     slug: "internal-onboarding-2026",
     title: "Onboarding Event",
@@ -241,10 +255,10 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     summary:
       "We headed to the TUM Science & Study Center Raitenhaslach for our annual team trip! It was the perfect mix of strategy and bonding as we reflected on the past semester, gathered feedback, and mapped out our upcoming events. A huge focus this year was welcoming and integrating our newest team members. To make sure everyone felt right at home, we balanced our brainstorming sessions with plenty of team building—including a hike up to the castle, board game nights, and a creative painting session.",
     gallery: [
-      img2025("raitenhaslach-1.jpeg"),
-      img2025("raitenhaslach-2.jpeg"),
-      img2025("raitenhaslach-3.jpeg"),
-      img2025("raitenhaslach-4.jpeg"),
+      rhl2025_1,
+      rhl2025_2,
+      rhl2025_3,
+      rhl2025_4,
     ],
   },
   {
