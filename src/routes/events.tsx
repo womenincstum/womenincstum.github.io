@@ -182,6 +182,11 @@ function EventsIndex() {
                   key={e.slug}
                   to="/events/$slug"
                   params={{ slug: e.slug }}
+                  search={{
+                    from: undefined,
+                    time,
+                    types: selectedTypes,
+                  }}
                   className={`group glass rounded-2xl p-6 hover:border-primary/50 transition flex flex-col ${
                     isPast ? "opacity-80" : ""
                   }`}
