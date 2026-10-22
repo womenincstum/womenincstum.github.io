@@ -1,4 +1,3 @@
-import jetbrainsLogo from "@/assets/partners/jetbrains-white.svg";
 import optiverLogo from "@/assets/partners/optiver.svg";
 import netlightLogo from "@/assets/partners/netlight.svg";
 import guardsquareLogo from "@/assets/partners/guardsquare.png";
@@ -63,6 +62,41 @@ import rhl2025_1 from "../assets/events/rhl-2025-1.jpeg";
 import rhl2025_2 from "../assets/events/rhl-2025-2.jpeg";
 import rhl2025_3 from "../assets/events/rhl-2025-3.jpeg";
 import rhl2025_4 from "../assets/events/rhl-2025-4.jpeg";
+import recruiting2025_1 from "../assets/events/recruiting-event-2025-1.jpeg";
+import recruiting2025_2 from "../assets/events/recruiting-event-2025-2.jpeg";
+import recruiting2025_3 from "../assets/events/recruiting-event-2025-3.jpeg";
+import recruiting2025_4 from "../assets/events/recruiting-event-2025-4.jpeg";
+import recruiting2025_5 from "../assets/events/recruiting-event-2025-5.jpeg";
+import phd2024_1 from "../assets/events/phd-event-2024-1.jpg";
+import phd2024_2 from "../assets/events/phd-event-2024-2.jpg";
+import phd2024_3 from "../assets/events/phd-event-2024-3.jpg";
+import phd2024_4 from "../assets/events/phd-event-2024-4.jpg";
+import recruiting2024_1 from "../assets/events/recruiting-event-2024-1.jpg";
+import recruiting2024_2 from "../assets/events/recruiting-event-2024-2.jpg";
+import recruiting2024_3 from "../assets/events/recruiting-event-2024-3.jpg";
+import recruiting2024_4 from "../assets/events/recruiting-event-2024-4.jpg";
+import recruiting2024_5 from "../assets/events/recruiting-event-2024-5.jpg";
+import recruiting2024_6 from "../assets/events/recruiting-event-2024-6.jpg";
+import exam_prep2024_1 from "../assets/events/exam-preparation-ws24-1.jpg";
+import exam_prep2024_2 from "../assets/events/exam-preparation-ws24-2.jpg";
+import christmas2023_1 from "../assets/events/christmas-event-2023-1.jpg";
+import christmas2023_2 from "../assets/events/christmas-event-2023-2.jpg";
+import christmas2023_3 from "../assets/events/christmas-event-2023-3.jpg";
+import christmas2023_4 from "../assets/events/christmas-event-2023-4.jpg";
+import christmas2023_5 from "../assets/events/christmas-event-2023-5.jpg";
+import christmas2023_6 from "../assets/events/christmas-event-2023-6.jpg";
+import netlight2023 from "../assets/events/netlight-career-lunch-2023.jpg";
+import gender_pay_gap2023_1 from "../assets/events/gender-pay-gap-event-2023-1.jpg";
+import gender_pay_gap2023_2 from "../assets/events/gender-pay-gap-event-2023-2.jpg";
+import set2023_1 from "../assets/events/set-fair-2023-1.jpg"
+import set2023_2 from "../assets/events/set-fair-2023-2.jpg"
+import yoga2023_1 from "../assets/events/yoga-event-2023-1.jpg"
+import yoga2023_2 from "../assets/events/yoga-event-2023-2.jpg"
+import yoga2023_3 from "../assets/events/yoga-event-2023-3.jpg"
+import yoga2023_4 from "../assets/events/yoga-event-2023-4.jpg"
+import hacking2023_1 from "../assets/events/hacking-workshop-2023-1.jpg"
+import hacking2023_2 from "../assets/events/hacking-workshop-2023-2.jpg"
+
 
 export type EventType = "Social" | "Workshop" | "Career" | "Internal";
 
@@ -87,12 +121,6 @@ export interface EventItem {
   partners?: EventPartner[];
   signupLink?: string;
 }
-
-// Helper to build image URLs from the legacy archive site
-const ARCHIVE = "https://womenincstum.github.io/assets/images";
-const img2025 = (name: string) => `${ARCHIVE}/content-2025/${name}`;
-const img2024 = (name: string) => `${ARCHIVE}/content-2024/${name}`;
-const img2023 = (name: string) => `${ARCHIVE}/content-2023/${name}`;
 
 // Fallback stock imagery for events without archive photos
 const stock = {
@@ -120,7 +148,6 @@ const stock = {
 
 export const events: EventItem[] = [
   // ===== Upcoming =====x
-
   {
     slug: "info-night-WS2026/27",
     title: "Info Night - Get to know us!",
@@ -254,12 +281,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "Annual team retreat — reflection, planning, and team building.",
     summary:
       "We headed to the TUM Science & Study Center Raitenhaslach for our annual team trip! It was the perfect mix of strategy and bonding as we reflected on the past semester, gathered feedback, and mapped out our upcoming events. A huge focus this year was welcoming and integrating our newest team members. To make sure everyone felt right at home, we balanced our brainstorming sessions with plenty of team building—including a hike up to the castle, board game nights, and a creative painting session.",
-    gallery: [
-      rhl2025_1,
-      rhl2025_2,
-      rhl2025_3,
-      rhl2025_4,
-    ],
+    gallery: [rhl2025_1, rhl2025_2, rhl2025_3, rhl2025_4],
   },
   {
     slug: "recruiting-event-2025",
@@ -272,13 +294,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "Meet the club, ask questions, and connect with our members.",
     summary:
       "We hosted an open evening for everyone to discover what our club is all about and how to get involved. Over plenty of snacks and drinks, guests got to chat with our members and hear about our mission to support women and underrepresented groups in tech. We kicked things off with a relaxed intro and Q&A, where we also shared a sneak peek of the projects, workshops, and mentorship programs coming up this semester.",
-    gallery: [
-      img2025("recruiting-event-1.jpeg"),
-      img2025("recruiting-event-2.jpeg"),
-      img2025("recruiting-event-3.jpeg"),
-      img2025("recruiting-event-4.jpeg"),
-      img2025("recruiting-event-5.jpeg"),
-    ],
+    gallery: [recruiting2025_1, recruiting2025_2, recruiting2025_3, recruiting2025_4, recruiting2025_5],
   },
   {
     slug: "phd-event-2025",
@@ -318,12 +334,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "Female PhD students and a professor share their research journeys.",
     summary:
       "We invited several female PhD students and a professor to share their journeys — the path that led them into research, the challenges they've faced during their PhDs, and how they're navigating and overcoming them. After their inspiring talks, we opened the floor to a panel discussion where questions from the team and the audience were answered in depth. A huge thank you to everyone who joined — it was a truly memorable evening.",
-    gallery: [
-      img2024("phd-event-2024-1.jpg"),
-      img2024("phd-event-2024-2.jpg"),
-      img2024("phd-event-2024-3.jpg"),
-      img2024("phd-event-2024-4.jpg"),
-    ],
+    gallery: [phd2024_1, phd2024_2, phd2024_3, phd2024_4],
   },
   {
     slug: "tech-interview-prep-optiver-2024",
@@ -349,14 +360,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "Meet the club, ask questions, and connect with our members.",
     summary:
       "We hosted a fantastic open evening for new students to discover what our club is all about and how to get involved. Over plenty of snacks and drinks, we shared our mission of empowering women and underrepresented groups in tech. We also highlighted our upcoming projects, workshops, and mentorship opportunities designed to help members grow both personally and professionally, leaving plenty of time for everyone to chat and connect with our members.",
-    gallery: [
-      img2024("recruiting-2024-1.jpg"),
-      img2024("recruiting-2024-2.jpg"),
-      img2024("recruiting-2024-3.jpg"),
-      img2024("recruiting-2024-4.jpg"),
-      img2024("recruiting-2024-5.jpg"),
-      img2024("recruiting-2024-6.jpg"),
-    ],
+    gallery: [recruiting2024_1, recruiting2024_2, recruiting2024_3, recruiting2024_4, recruiting2024_5, recruiting2024_6],
   },
   {
     slug: "exam-preparation-2024",
@@ -369,10 +373,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "Study strategies, time management, and stress tips for exam season.",
     summary:
       "We hosted an exam-prep session where experienced students stepped up to share their top strategies for surviving and thriving during exam season. The interactive night covered everything from time management and study techniques to stress management and staying motivated. With plenty of Q&A throughout, attendees walked away with tailored advice and a clear game plan for their upcoming finals.",
-    gallery: [
-      img2024("exam-preparation-ws24-1.jpg"),
-      img2024("exam-preparation-ws24-2.jpg"),
-    ],
+    gallery: [exam_prep2024_1, exam_prep2024_2],
   },
 
   // 2023
@@ -387,14 +388,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "Our annual Christmas celebration — gift exchange, food, and good company.",
     summary:
       "We wrapped up the year with our annual Christmas party! It was a beautiful celebration of the community we've built together, filled with networking, a festive gift exchange, and shared reflections on everything we achieved over the past year.",
-    gallery: [
-      img2023("christmas-event-1.jpg"),
-      img2023("christmas-event-2.jpg"),
-      img2023("christmas-event-3.jpg"),
-      img2023("christmas-event-4.jpg"),
-      img2023("christmas-event-5.jpg"),
-      img2023("christmas-event-6.jpg"),
-    ],
+    gallery: [christmas2023_1, christmas2023_2, christmas2023_3, christmas2023_4, christmas2023_5, christmas2023_6],
   },
   {
     slug: "netlight-career-lunch-2023",
@@ -410,7 +404,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     partners: [
       { name: "Netlight Consulting", logo: netlightLogo, website: "https://www.netlight.com/" },
     ],
-    gallery: [img2023("netlight-career-lunch.jpg")],
+    gallery: [netlight2023],
   },
   {
     slug: "gender-pay-gap-2023",
@@ -423,10 +417,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "Maxi Görnitz on the gender pay gap and tips for salary negotiation.",
     summary:
       "Maxi Görnitz joined us to unpack the complexities of the gender pay gap. She guided our community through how the gap has evolved over time, what it looks like specifically in tech and STEM fields today, and shared invaluable, concrete tips for self-advocacy and salary negotiation as we prepare to enter the workforce.",
-    gallery: [
-      img2023("gender-pay-gap-event-1.jpg"),
-      img2023("gender-pay-gap-event-2.jpg"),
-    ],
+    gallery: [gender_pay_gap2023_1, gender_pay_gap2023_2],
   },
   {
     slug: "set-fair-2023",
@@ -439,7 +430,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "Welcoming incoming students at the SET Fair.",
     summary:
       "Our team headed to the SET Fair to welcome the new students! We shared what our club is all about, our upcoming events, and built great connections with students.",
-    gallery: [img2023("set-fair-1.jpg"), img2023("set-fair-2.jpg")],
+    gallery: [set2023_1, set2023_2],
   },
   {
     slug: "yoga-2023",
@@ -452,12 +443,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
     description: "A calming Yin Yoga session to unwind, stretch, and reset.",
     summary:
       "When studying computer science at TUM, it's easy to forget to slow down, which is why our Yin Yoga session was the perfect escape. Held at the MI building and led by our own team member and professional yoga instructor, Diana, the calm evening helped us quiet our minds and stretch out the stress of the semester. Thank you to Diana for the amazing guidance, and to everyone who shared the space with us. We're already looking forward to the next wellness session!",
-    gallery: [
-      img2023("yoga-event-1.jpg"),
-      img2023("yoga-event-2.jpg"),
-      img2023("yoga-event-3.jpg"),
-      img2023("yoga-event-4.jpg"),
-    ],
+    gallery: [yoga2023_1, yoga2023_2, yoga2023_3, yoga2023_4],
   },
   {
     slug: "hacking-workshop-2023",
@@ -474,10 +460,7 @@ To our new members - we can’t wait to see the projects you’ll build and how 
       { name: "Guardsquare", logo: guardsquareLogo, website: "https://www.guardsquare.com/" },
       { name: "Google Developer Student Club Munich", logo: gdscMunichLogo, website: "https://gdg.community.dev/gdg-on-campus-technical-university-of-munich-munich-germany/" },
     ],
-    gallery: [
-      img2023("hacking-workshop-1.jpg"),
-      img2023("hacking-workshop-2.jpg"),
-    ],
+    gallery: [hacking2023_1, hacking2023_2],
   },
 
 ];
