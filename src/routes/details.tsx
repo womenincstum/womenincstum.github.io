@@ -13,6 +13,8 @@ import maheenImg from "@/assets/members/maheen.jpg";
 import hristinaImg from "@/assets/members/hristina.jpg";
 import evelinaImg from "@/assets/members/evelina.jpg";
 import annaImg from "@/assets/members/anna.jpg";
+import chrissaImg from "@/assets/members/chrissa.jpg";
+import noraImg from "@/assets/members/nora.jpg";
 
 export const Route = createFileRoute("/details")({
   component: Details,
@@ -33,7 +35,7 @@ type Person = { name: string; role?: string; photo?: string; photoPosition?: str
 
 const board: Person[] = [
   { name: "Sabrina Glatz", role: "Organization & Management", photo: sabrinaImg },
-  { name: "Nora Paul", role: "PR & Communication"},
+  { name: "Nora Paul", role: "PR & Communication", photo: noraImg},
   { name: "Milena Ryzner", role: "Social Media & Marketing"},
   { name: "Anna Engel", role: "Social Media & Marketing", photo: annaImg},
   { name: "Sofiia Storozhenko", role: "Events & Community", photo: sofiiaImg },
@@ -48,7 +50,7 @@ const activeMembers: Person[] = [
   { name: "Maheen Rizwan", photo: maheenImg },
   { name: "Hristina Ivanova", photo: hristinaImg },
   { name: "Jana Brade"},
-  { name: "Chrissa Philip"},
+  { name: "Chrissa Philip", photo: chrissaImg },
 ];
 
 type Alum = { name: string; role?: string; years?: string };
