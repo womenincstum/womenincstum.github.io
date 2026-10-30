@@ -15,6 +15,7 @@ import evelinaImg from "@/assets/members/evelina.jpg";
 import annaImg from "@/assets/members/anna.jpg";
 import chrissaImg from "@/assets/members/chrissa.jpg";
 import noraImg from "@/assets/members/nora.jpg";
+import milenaImg from "@/assets/members/milena.jpg";
 
 export const Route = createFileRoute("/details")({
   component: Details,
@@ -36,7 +37,7 @@ type Person = { name: string; role?: string; photo?: string; photoPosition?: str
 const board: Person[] = [
   { name: "Sabrina Glatz", role: "Organization & Management", photo: sabrinaImg },
   { name: "Nora Paul", role: "PR & Communication", photo: noraImg},
-  { name: "Milena Ryzner", role: "Social Media & Marketing"},
+  { name: "Milena Ryzner", role: "Social Media & Marketing", photo: milenaImg},
   { name: "Anna Engel", role: "Social Media & Marketing", photo: annaImg},
   { name: "Sofiia Storozhenko", role: "Events & Community", photo: sofiiaImg },
 ];
