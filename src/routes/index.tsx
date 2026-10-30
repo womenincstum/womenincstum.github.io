@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { AnimatedHeadline } from "@/components/AnimatedHeadline";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TalentPoolDialog } from "@/components/TalentPoolDialog";
-// import { TumAuthDialog } from "@/components/TumAuthDialog";
+import { TumAuthDialog } from "@/components/TumAuthDialog";
 
 import { events as allEvents } from "@/data/events";
 
@@ -157,14 +157,16 @@ function Landing() {
             <p className="mt-2 text-sm text-muted-foreground flex-1">
               Join our WhatsApp community to stay updated on all our events, workshops, and socials.
             </p>
-            <a
-              href="https://chat.whatsapp.com/GoIijqtubKoC7d2Mb4fqzg"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full glass px-5 py-3 font-semibold hover:border-primary/40 transition cursor-pointer"
-            >
-              <MessageCircle size={16} /> Join the chat
-            </a>
+            <TumAuthDialog
+              trigger={
+                <button
+                  type="button"
+                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-full glass px-5 py-3 font-semibold hover:border-primary/40 transition cursor-pointer"
+                >
+                  <MessageCircle size={16} /> Join the chat
+                </button>
+              }
+            />
           </div>
 
           <div className="glass rounded-3xl p-7 flex flex-col ring-2 ring-primary/50 bg-primary/[0.04]">

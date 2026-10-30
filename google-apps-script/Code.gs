@@ -36,9 +36,9 @@ function sendVerificationCode(email) {
 
   var normalized = email.toString().trim().toLowerCase();
 
-  // Accept @tum.de and @mytum.de
-  if (!normalized.endsWith("@tum.de") && !normalized.endsWith("@mytum.de")) {
-    return { success: false, message: "Please use your official TUM email address (@tum.de or @mytum.de)." };
+  // Accept any valid email format
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)) {
+    return { success: false, message: "Please enter a valid email address." };
   }
 
   // Generate 6-digit random code
@@ -63,7 +63,7 @@ function sendVerificationCode(email) {
     "",
     "This code is valid for 10 minutes.",
     "",
-    "This is an automated email sent to verify your TUM student status.",
+    "This is an automated email sent to verify your email address.",
     "If you did not request this code, you can safely ignore this message.",
     "",
     "Women in CS @ TUM e.V.",
