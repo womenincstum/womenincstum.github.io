@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { AnimatedHeadline } from "@/components/AnimatedHeadline";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TalentPoolDialog } from "@/components/TalentPoolDialog";
-import { TumAuthDialog } from "@/components/TumAuthDialog";
+// import { TumAuthDialog } from "@/components/TumAuthDialog";
 
 import { events as allEvents } from "@/data/events";
 
@@ -102,7 +102,11 @@ function Landing() {
               key={e.slug}
               to="/events/$slug"
               params={{ slug: e.slug }}
-              search={{ from: "home" as const }}
+              search={{
+                from: "home",
+                time: undefined,
+                types: [],
+              }}
               className="group glass rounded-2xl p-6 hover:border-primary/50 transition flex flex-col"
             >
               <span className="self-start text-xs font-medium text-primary glass rounded-full px-2.5 py-1">
@@ -119,9 +123,16 @@ function Landing() {
           ))}
         </div>
         <div className="mt-6">
-          <Link to="/events" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
-            See all events <ArrowRight size={14} />
-          </Link>
+          <Link
+              to="/events"
+              search={{
+                time: undefined,
+                types: [],
+              }}
+              className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+            >
+              See all events <ArrowRight size={14} />
+            </Link>
         </div>
       </section>
 
@@ -146,16 +157,14 @@ function Landing() {
             <p className="mt-2 text-sm text-muted-foreground flex-1">
               Join our WhatsApp community to stay updated on all our events, workshops, and socials.
             </p>
-            <TumAuthDialog
-              trigger={
-                <button
-                  type="button"
-                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-full glass px-5 py-3 font-semibold hover:border-primary/40 transition cursor-pointer"
-                >
-                  <MessageCircle size={16} /> Join the chat
-                </button>
-              }
-            />
+            <a
+              href="https://chat.whatsapp.com/GoIijqtubKoC7d2Mb4fqzg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full glass px-5 py-3 font-semibold hover:border-primary/40 transition cursor-pointer"
+            >
+              <MessageCircle size={16} /> Join the chat
+            </a>
           </div>
 
           <div className="glass rounded-3xl p-7 flex flex-col ring-2 ring-primary/50 bg-primary/[0.04]">
