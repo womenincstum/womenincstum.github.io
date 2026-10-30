@@ -105,8 +105,8 @@ export function TumAuthDialog({
       return;
     }
 
-    if (!cleanEmail.endsWith("@tum.de") && !cleanEmail.endsWith("@mytum.de")) {
-      setErrorMessage("Please use an official TUM email address ending with @tum.de or @mytum.de.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
+      setErrorMessage("Please enter a valid email address.");
       return;
     }
 
@@ -199,7 +199,7 @@ export function TumAuthDialog({
         <DialogHeader className="text-left space-y-2">
           <div className="flex items-center gap-2">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/15 text-primary border border-primary/20">
-              <ShieldCheck size={14} /> TUM Member Access
+              <ShieldCheck size={14} /> Member Access
             </span>
           </div>
           <DialogTitle className="text-2xl font-bold tracking-tight">
@@ -209,8 +209,8 @@ export function TumAuthDialog({
           </DialogTitle>
           <DialogDescription className="text-muted-foreground text-sm">
             {step === "verified"
-              ? "Your TUM student verification is active. Click below to join the official WhatsApp group."
-              : "To protect our community from spam and unverified accounts, please authenticate with your TUM email address."}
+              ? "Your email has been verified. Click below to join our WhatsApp community."
+              : "To protect our community from spam, please verify your email address."}
           </DialogDescription>
         </DialogHeader>
 
@@ -218,7 +218,7 @@ export function TumAuthDialog({
           <form onSubmit={handleSendCode} className="mt-4 space-y-4">
             <div className="space-y-2">
               <Label htmlFor="tum-email" className="text-sm font-medium">
-                TUM Email Address
+                Email Address
               </Label>
               <div className="relative">
                 <Mail
@@ -230,7 +230,7 @@ export function TumAuthDialog({
                   type="email"
                   autoComplete="email"
                   autoFocus
-                  placeholder="firstname.lastname@tum.de"
+                  placeholder="example@email.com"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -300,7 +300,7 @@ export function TumAuthDialog({
                 <span className="truncate">Sent to <strong className="text-foreground">{email}</strong></span>
               </div>
               <p className="text-xs text-muted-foreground">
-                Check your TUM inbox and spam folder for an email from <strong>Women in CS @ TUM</strong>.
+                Check your inbox and spam folder for an email from <strong>Women in CS @ TUM</strong>.
               </p>
 
               <div className="flex justify-center py-2">
