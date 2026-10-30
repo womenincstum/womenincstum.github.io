@@ -1,6 +1,6 @@
 export const COMMUNITY_CONFIG = {
   scriptUrl:
-    "https://script.google.com/macros/s/AKfycbwUHrir0OPa6X10oy6q4wsds_tT2_iIUpuZsMGPgQs6v3GWm8AJYM482G7AF4vTeEn7/exec",
+    "https://script.google.com/macros/s/AKfycbwgTkcnPuHFOFUwMdcpPhU9XIu7bhf0FOnSt81qPnunS1ESLNbJneTlf1Ab7FdE7poC/exec",
   storageKey: "wincs_tum_verified",
 };
 
@@ -85,16 +85,12 @@ export async function requestVerificationCode(
     }
   }
 
-  if (
-    !normalizedEmail.endsWith("@tum.de") &&
-    !normalizedEmail.endsWith("@mytum.de")
-  ) {
-    return {
-      success: false,
-      message:
-        "Please enter an official TUM email address ending with @tum.de or @mytum.de.",
-    };
-  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+  return {
+    success: false,
+    message: "Please enter a valid email address.",
+  };
+}
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 12000);

@@ -209,8 +209,8 @@ export function TumAuthDialog({
           </DialogTitle>
           <DialogDescription className="text-muted-foreground text-sm">
             {step === "verified"
-              ? "Your TUM student verification is active. Click below to join the official WhatsApp group."
-              : "To protect our community from spam and unverified accounts, please authenticate with your email address."}
+              ? "Your email has been verified. Click below to join our WhatsApp community."
+              : "To protect our community from spam, please verify your email address."}
           </DialogDescription>
         </DialogHeader>
 
@@ -300,7 +300,7 @@ export function TumAuthDialog({
                 <span className="truncate">Sent to <strong className="text-foreground">{email}</strong></span>
               </div>
               <p className="text-xs text-muted-foreground">
-                Check your TUM inbox and spam folder for an email from <strong>Women in CS @ TUM</strong>.
+                Check your inbox and spam folder for an email from <strong>Women in CS @ TUM</strong>.
               </p>
 
               <div className="flex justify-center py-2">
