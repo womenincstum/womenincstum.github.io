@@ -7,13 +7,15 @@ import sabrinaImg from "@/assets/members/sabrina.jpg";
 import sofiiaImg from "@/assets/members/sofiia.jpg";
 import sarraImg from "@/assets/members/sarra.png";
 import maissaImg from "@/assets/members/maissa.jpg";
-import anastasiiaImg from "@/assets/members/anastasiia.png";
+import anastasiiaImg from "@/assets/members/anastasiia.jpg";
 import alinaImg from "@/assets/members/alina.jpg";
-
-import ivanaImg from "@/assets/members/ivana.jpg";
 import maheenImg from "@/assets/members/maheen.jpg";
 import hristinaImg from "@/assets/members/hristina.jpg";
 import evelinaImg from "@/assets/members/evelina.jpg";
+import annaImg from "@/assets/members/anna.jpg";
+import chrissaImg from "@/assets/members/chrissa.jpg";
+import noraImg from "@/assets/members/nora.jpg";
+import milenaImg from "@/assets/members/milena.jpg";
 
 export const Route = createFileRoute("/details")({
   component: Details,
@@ -34,23 +36,22 @@ type Person = { name: string; role?: string; photo?: string; photoPosition?: str
 
 const board: Person[] = [
   { name: "Sabrina Glatz", role: "Organization & Management", photo: sabrinaImg },
-  { name: "Maheen Rizwan", role: "Social Media & Marketing", photo: maheenImg },
-  { name: "Hristina Ivanova", role: "PR & Communication", photo: hristinaImg },
+  { name: "Nora Paul", role: "PR & Communication", photo: noraImg},
+  { name: "Milena Ryzner", role: "Social Media & Marketing", photo: milenaImg},
+  { name: "Anna Engel", role: "Social Media & Marketing", photo: annaImg},
   { name: "Sofiia Storozhenko", role: "Events & Community", photo: sofiiaImg },
 ];
 
 const activeMembers: Person[] = [
-  { name: "Ivana Peneva", photo: ivanaImg },
   { name: "Alina Ignatova", photo: alinaImg },
   { name: "Anastasiia Korzhylova", photo: anastasiiaImg },
   { name: "Maissa Nouicer", photo: maissaImg },
   { name: "Sarra Ouertani", photo: sarraImg },
   { name: "Evelina Bublyk", photo: evelinaImg },
-  { name: "Jana Brade" },
-  { name: "Nora Paul" },
-  { name: "Chrissa Philip" },
-  { name: "Milena Ryzner" },
-  { name: "Anna Engel" },
+  { name: "Maheen Rizwan", photo: maheenImg },
+  { name: "Hristina Ivanova", photo: hristinaImg },
+  { name: "Jana Brade"},
+  { name: "Chrissa Philip", photo: chrissaImg },
 ];
 
 type Alum = { name: string; role?: string; years?: string };
@@ -62,6 +63,7 @@ const alumni: Alum[] = [
   { name: "Begüm Balat", role: "Community" },
   { name: "Pauline Jakob", role: "Finance" },
   // Former members
+  { name: "Ivana Peneva", role: "WinCS Officer"  },
   { name: "Veronika Bauer", role: "WinCS Officer" },
   { name: "Panagiotis Petropoulakis", role: "WinCS Officer" },
   { name: "Sarah Berbuir", role: "WinCS Officer" },
