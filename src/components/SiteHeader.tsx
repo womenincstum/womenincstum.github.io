@@ -9,7 +9,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 glass">
       <div className="bg-primary text-primary-foreground text-center text-sm py-2 px-4">
         <span className="font-medium">Applications are open!</span>
-        {" "}Become an active member — apply by <span className="font-semibold">November 7</span>.{" "}
+        {" "}Become an active member — apply by <span className="font-semibold">November 8</span>.{" "}
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSd0VstaqYs27ZhucT6dsa4JVS_Hbc0Spegcm4b5uaSGPwJhvQ/viewform?usp=header"
           target="_blank"
