@@ -85,10 +85,10 @@ export async function requestVerificationCode(
     }
   }
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+  if (!/^[^\s@,;<>]+@(tum|lmu)\.de$/.test(normalizedEmail)) {
   return {
     success: false,
-    message: "Please enter a valid email address.",
+    message: "Please use a @tum.de or @lmu.de email address.",
   };
 }
 

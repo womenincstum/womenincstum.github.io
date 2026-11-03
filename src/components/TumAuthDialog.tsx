@@ -218,7 +218,7 @@ export function TumAuthDialog({
           <form onSubmit={handleSendCode} className="mt-4 space-y-4">
             <div className="space-y-2">
               <Label htmlFor="tum-email" className="text-sm font-medium">
-                Email Address
+                TUM/LMU Email Address
               </Label>
               <div className="relative">
                 <Mail
