@@ -149,6 +149,29 @@ const stock = {
 export const events: EventItem[] = [
   // ===== Upcoming =====x
   {
+    slug: "onboarding-WS2026/27",
+    title: "Onboarding",
+    date: "November 16, 2026 · 17:30-21:30",
+    isoDate: "2026-11-16T17:30:00",
+    location: "Campus Garching (more info coming soon)",
+    type: "Internal",
+    description: "We are excited to welcome our new members!",
+    summary: "",
+    signupNote: "More information coming soon",
+  },
+  {
+    slug: "Optiver-2026",
+    title: "Interview Tips Session with Optiver",
+    date: "December 2, 2026 · 10:00-20:00",
+    isoDate: "2026-12-02T09:30:00+01:00",
+    location: "Campus Garching",
+    type: "Career",
+    description: "Connect with tech companies and discover new career paths at the ITCS Job Fair!",
+    summary: "Join us at the ITCS Job Fair! Explore exciting career opportunities in tech, meet potential employers, discover internships and job openings, and connect with professionals from the industry. A great chance to network and take the next step in your career!",
+    signupNote: "More information coming soon",
+  },
+  // ===== Past =====
+  {
     slug: "info-night-WS2026/27",
     title: "Info Night - Get to know us!",
     date: "October 26, 2026 · 18:00",
@@ -163,14 +186,13 @@ export const events: EventItem[] = [
     slug: "ITCS-2026",
     title: "ITCS Job Fair",
     date: "October 30, 2026 · 9:30-16:00",
-    isoDate: "2026-10-30T9:30:00",
+    isoDate: "2026-10-30T09:30:00+01:00",
     location: "MOC Event Center, Halle 3, Lilienthalallee 40, 80939 München",
     type: "Career",
     description: "Connect with tech companies and discover new career paths at the ITCS Job Fair!",
     summary: "Join us at the ITCS Job Fair! Explore exciting career opportunities in tech, meet potential employers, discover internships and job openings, and connect with professionals from the industry. A great chance to network and take the next step in your career!",
     signupNote: "More information coming soon",
   },
-  // ===== Past =====
     {
     slug: "support-tum-cs-schnupperstudium-2026",
     title: "CS Schnupperstudium for High School Girls",
