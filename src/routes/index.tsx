@@ -85,7 +85,7 @@ function Landing() {
       </section>
 
       {/* EVENTS */}
-      <section id="events" className="mx-auto max-w-6xl px-5 py-12 lg:py-16">
+      <section id="events" className="mx-auto w-full max-w-6xl px-5 py-12 lg:py-16">
         <div className="w-full max-w-none">
           <p className="text-sm uppercase tracking-widest text-primary font-medium">What's next</p>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold">
