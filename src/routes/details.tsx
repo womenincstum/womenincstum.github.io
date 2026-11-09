@@ -200,7 +200,7 @@ function Details() {
                 ))}
               </div>
 
-              <p className="mt-auto px-4 pt-1 pb-6 text-xs uppercase tracking-wider text-primary font-medium">
+              <p className="mt-auto px-4 pt-1 pb-6 text-xs uppercase tracking-wider text-primary font-medium whitespace-nowrap">
                 {members[0].role}
               </p>
             </div>
