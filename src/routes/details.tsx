@@ -42,6 +42,13 @@ const board: Person[] = [
   { name: "Sofiia Storozhenko", role: "Events & Community", photo: sofiiaImg },
 ];
 
+const boardGroups = board.reduce<Person[][]>((groups, person) => {
+  const group = groups.find(([first]) => first.role === person.role);
+  if (group) group.push(person);
+  else groups.push([person]);
+  return groups;
+}, []);
+
 const activeMembers: Person[] = [
   { name: "Alina Ignatova", photo: alinaImg },
   { name: "Anastasiia Korzhylova", photo: anastasiiaImg },
@@ -165,16 +172,37 @@ function Details() {
           Four students leading Women in CS @ TUM — keeping the club running, growing our reach,
           and bringing our community's ideas to life.
         </p>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {board.map((m) => (
-            <div key={m.role} className="glass rounded-2xl p-6 flex flex-col items-center text-center gap-4">
-              <PersonAvatar person={m} size="lg" />
-              <div>
-                <p className="font-semibold text-xl">{m.name}</p>
-                <p className="mt-1 text-xs uppercase tracking-wider text-primary font-medium">
-                  {m.role}
-                </p>
+       <div className="mt-10 flex flex-wrap lg:flex-nowrap justify-center gap-5">
+          {boardGroups.map((members) => (
+            <div
+              key={members[0].role}
+              className={`glass rounded-2xl flex flex-col text-center w-full ${
+                members.length > 1
+                  ? "lg:flex-[2] lg:max-w-[24rem]"
+                  : "sm:w-[calc(50%-0.625rem)] lg:w-auto lg:flex-1"
+              }`}
+            >
+              <div
+                className={`grid ${
+                  members.length > 1 ? "grid-cols-2 gap-2" : "grid-cols-1"
+                }`}
+              >
+                {members.map((person) => (
+                  <div
+                    key={person.name}
+                    className="px-2 pt-6 flex flex-col items-center gap-4"
+                  >
+                    <PersonAvatar person={person} size="lg" />
+                    <p className="font-semibold text-lg lg:text-xl whitespace-nowrap">
+                      {person.name}
+                    </p>
+                  </div>
+                ))}
               </div>
+
+              <p className="mt-auto px-4 pt-1 pb-6 text-xs uppercase tracking-wider text-primary font-medium whitespace-nowrap">
+                {members[0].role}
+              </p>
             </div>
           ))}
         </div>
