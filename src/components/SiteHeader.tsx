@@ -17,7 +17,7 @@ export function SiteHeader() {
           className="underline font-semibold hover:opacity-80 transition"
         >
           Apply now →
-        </a>s
+        </a>
       </div> */}
       <div className="flex w-full items-center justify-between px-5 py-2">
         <Link to="/" className="flex items-center gap-2">
