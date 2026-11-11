@@ -175,15 +175,14 @@ function Landing() {
             </span>
             <h3 className="mt-5 text-xl font-bold">Become an active member</h3>
             <p className="mt-2 text-sm text-muted-foreground flex-1">
-              Join the team behind the scenes - organize events, shape our programs, and grow with motivated women in tech.
+              Join the team behind the scenes - organize events, shape our programs, and grow with motivated women in tech. Applications reopen in April 2027.
             </p>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd0VstaqYs27ZhucT6dsa4JVS_Hbc0Spegcm4b5uaSGPwJhvQ/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-3 font-semibold text-center hover:opacity-90 transition"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full glass px-5 py-3 font-semibold hover:border-primary/40 transition text-center leading-tight"
             >
-              Apply now — deadline Nov 7
+              Applications closed
             </a>
           </div>
 
