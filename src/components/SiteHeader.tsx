@@ -7,7 +7,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 glass">
-      <div className="bg-primary text-primary-foreground text-center text-sm py-2 px-4">
+      {/* <div className="bg-primary text-primary-foreground text-center text-sm py-2 px-4">
         <span className="font-medium">Applications are open!</span>
         {" "}Become an active member — apply by <span className="font-semibold">November 8</span>.{" "}
         <a
@@ -18,7 +18,7 @@ export function SiteHeader() {
         >
           Apply now →
         </a>
-      </div>
+      </div> */}
       <div className="flex w-full items-center justify-between px-5 py-2">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Women in CS @ TUM" className="h-[2.1rem] w-auto object-contain" />
