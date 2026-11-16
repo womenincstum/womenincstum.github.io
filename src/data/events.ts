@@ -148,8 +148,8 @@ const stock = {
 
 export const events: EventItem[] = [
   // ===== Upcoming =====x
-  {
-    slug: "onboarding-WS2026/27",
+  /*{
+     slug: "onboarding-WS2026/27",
     title: "Onboarding",
     date: "November 16, 2026 · 17:30-21:30",
     isoDate: "2026-11-16T17:30:00",
@@ -157,17 +157,28 @@ export const events: EventItem[] = [
     type: "Internal",
     description: "We are excited to welcome our new members!",
     summary: "",
-    signupNote: "More information coming soon",
-  },
+    signupNote: "More information coming soon", 
+  },*/
   {
     slug: "Optiver-2026",
     title: "Interview Tips Session with Optiver",
-    date: "December 2, 2026 · 10:00-20:00",
-    isoDate: "2026-12-02T09:30:00+01:00",
-    location: "Campus Garching",
+    date: "December 2, 2026 · Coffee chats 10:00–17:00 · Evening session 18:00–19:30",
+    isoDate: "2026-12-02T10:00:00+01:00",
+    location: "Campus Garching (tba)",
     type: "Career",
-    description: "Connect with tech companies and discover new career paths at the ITCS Job Fair!",
-    summary: "Join us at the ITCS Job Fair! Explore exciting career opportunities in tech, meet potential employers, discover internships and job openings, and connect with professionals from the industry. A great chance to network and take the next step in your career!",
+    description: "Meet Optiver recruiters for a one-on-one coffee chat, then get technical interview tips from an Optiver developer and network over pizza and drinks.",
+    summary: "Book a 20-minute coffee chat with an Optiver recruiter to ask about careers, get feedback on your CV, or discuss internship opportunities. In the evening, an Optiver developer will share practical tips for technical interviews. You’ll also hear about open roles and have time to meet the Optiver team and other attendees over pizza and drinks. The event is open to all genders and fields of study.",
+    signupNote: "More information coming soon",
+  },
+  {
+    slug: "AWS-2026",
+    title: "Workshop with AWS",
+    date: "December 8, 2026 · 17:00-20:30",
+    isoDate: "2026-12-08T17:00:00+01:00",
+    location: "Munich Center (tba)",
+    type: "Career",
+    description: "Explore cloud computing and agentic AI in a hands-on workshop with AWS SGB. Put what you’ve learned into practice in a team challenge.",
+    summary: "Join Women in CS @ TUM and AWS SGB for a guided workshop on cloud computing and agentic AI. You’ll work through practical exercises with a trainer and team up with other participants for a closing challenge (and possibly win a prize!). The workshop is designed for bachelor’s and master’s students with a technical foundation. Students of all genders are welcome, and women are especially encouraged to apply. There are 25 places available.",
     signupNote: "More information coming soon",
   },
   // ===== Past =====
@@ -179,8 +190,7 @@ export const events: EventItem[] = [
     location: "StudiTUM Garching, Room: 5532.EG.002",
     type: "Social",
     description: "Meet our team, enjoy games, tea and hot chocolate, and connect with other women in your field.",
-    summary: "Join Women in CS @ TUM for a cozy Info Night! Meet our team, enjoy games, tea and hot chocolate, and connect with other women in computer science. Come hang out and get to know our community! Sign up above ⬆",
-    signupLink: "https://luma.com/sysa4t7j",
+    summary: "Join Women in CS @ TUM for a cozy Info Night! Meet our team, enjoy games, tea and hot chocolate, and connect with other women in computer science. Come hang out and get to know our community!",
   },
   {
     slug: "ITCS-2026",
