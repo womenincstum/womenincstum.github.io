@@ -160,7 +160,7 @@ export const events: EventItem[] = [
     signupNote: "More information coming soon", 
   },*/
   {
-    slug: "Optiver-2026",
+    slug: "Optiver-1-2026",
     title: "Coffee Chats with Optiver",
     date: "December 2, 2026 · 10:00–17:00",
     isoDate: "2026-12-02T10:00:00+01:00",
@@ -171,7 +171,7 @@ export const events: EventItem[] = [
     signupLink: "https://4xtvs.share.hsforms.com/2KGo5OCczSb-KfKuUW7segA",
   },
   {
-    slug: "Optiver-2026",
+    slug: "Optiver-2-2026",
     title: "Interview Tips with Optiver",
     date: "December 2, 2026 · 18:00–19:30",
     isoDate: "2026-12-02T18:00:00+01:00",
@@ -188,8 +188,8 @@ export const events: EventItem[] = [
     isoDate: "2026-12-08T17:00:00+01:00",
     location: "Munich Center (tba)",
     type: "Career",
-    description: "Explore cloud computing and agentic AI in a hands-on workshop with AWS SGB. Put what you’ve learned into practice in a team challenge.",
-    summary: "Join Women in CS @ TUM and AWS SGB for a guided workshop on cloud computing and agentic AI. You’ll work through practical exercises with a trainer and team up with other participants for a closing challenge (and possibly win a prize!). The workshop is designed for bachelor’s and master’s students with a technical foundation. Students of all genders are welcome, and women are especially encouraged to apply. There are 25 places available.",
+    description: "Explore cloud computing and agentic AI in a hands-on workshop with AWS SGB. Put what you’ve learned into practice in a team challenge!",
+    summary: "Join Women in CS @ TUM and AWS SGB for a guided workshop on cloud computing and agentic AI. You’ll work through practical exercises with a trainer and team up with other participants for a closing challenge (and possibly win a prize!). The workshop is designed for bachelor’s and master’s students with a technical foundation. Students of all genders are welcome, and women are especially encouraged to apply. There are 25 places available!",
     signupNote: "More information coming soon",
   },
   // ===== Past =====
