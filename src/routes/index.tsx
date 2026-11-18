@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar, MapPin, Handshake, Users, Star, Sparkles, MessageCircle, Mail, Linkedin, Instagram } from "lucide-react";
 import heroImg1200 from "@/assets/hero-team-1200.webp";
 import heroImg800 from "@/assets/hero-team-800.webp";
+import optiverLogo from "@/assets/partners/optiver.svg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { AnimatedHeadline } from "@/components/AnimatedHeadline";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -135,6 +136,36 @@ function Landing() {
             </Link>
         </div>
       </section>
+
+      <article
+        aria-labelledby="optiver-career-kickstarter"
+        className="mx-auto w-full max-w-6xl px-5"
+      >
+        <div className="glass flex flex-col gap-5 rounded-2xl p-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <img src={optiverLogo} alt="Optiver" className="h-11 w-auto sm:h-12" />
+            <h2 id="optiver-career-kickstarter" className="mt-3 text-xl font-bold">
+              Career Kickstarter: Women in Tech 2027
+            </h2>
+            <p className="mt-1 text-muted-foreground">
+              Work on your coding skills in hands-on workshops, hear from women engineers, and
+              connect with peers. Optiver covers travel and accommodation. Apply now!
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">12–16 April 2027 · Amsterdam</p>
+          </div>
+          <div className="flex shrink-0 flex-col items-start gap-2">
+            <p className="text-sm font-semibold">
+              Open until <time dateTime="2027-01-10">10 January 2027</time>
+            </p>
+            <a
+              href="https://www.optiver.com/join-us/jobs/technology/amsterdam/career-kickstarter-women-in-tech-2027/apply"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-5 py-3 font-semibold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            >
+              Apply at Optiver
+            </a>
+          </div>
+        </div>
+      </article>
 
       {/* JOIN US — 3 ways to get involved */}
       <section id="join" className="mx-auto max-w-6xl px-5 py-12 lg:py-16">
