@@ -148,6 +148,51 @@ const stock = {
 
 export const events: EventItem[] = [
   // ===== Upcoming =====x
+  /*{
+     slug: "onboarding-WS2026/27",
+    title: "Onboarding",
+    date: "November 16, 2026 · 17:30-21:30",
+    isoDate: "2026-11-16T17:30:00",
+    location: "Campus Garching (more info coming soon)",
+    type: "Internal",
+    description: "We are excited to welcome our new members!",
+    summary: "",
+    signupNote: "More information coming soon", 
+  },*/
+  {
+    slug: "Optiver-1-2026",
+    title: "Coffee Chats with Optiver",
+    date: "December 2, 2026 · 10:00–17:00",
+    isoDate: "2026-12-02T10:00:00+01:00",
+    location: "Hotel at Gallileo",
+    type: "Career",
+    description: "Get personalised CV feedback, explore career opportunities at Optiver, and ask your questions in a 20-minute coffee chat with a recruiter.",
+    summary: "What could your next career move look like? Sit down one-on-one with an Optiver recruiter to explore internships and roles in software engineering, quantitative research, and trading. Bring your CV for feedback, ask about the application process, or find out what it’s like to work at Optiver. You set the agenda for your 20-minute conversation. Open to all genders and fields of study. Register here for one of the limited places!",
+    signupLink: "https://4xtvs.share.hsforms.com/2KGo5OCczSb-KfKuUW7segA",
+  },
+  {
+    slug: "Optiver-2-2026",
+    title: "Interview Tips with Optiver",
+    date: "December 2, 2026 · 18:00–19:30",
+    isoDate: "2026-12-02T18:00:00+01:00",
+    location: "Campus Garching (tba)",
+    type: "Career",
+    description: "Prepare for your next technical interview with tips from an Optiver developer and connect over pizza and drinks.",
+    summary: "Get practical advice for tackling technical interviews directly from an Optiver developer. Learn how to approach your preparation, bring your questions, and explore career opportunities with the Optiver team. Afterwards, keep the conversation going over pizza and drinks while connecting with recruiters, a developer, and fellow students. Open to all genders and fields of study. Register here for one of 50 places!",
+    signupLink: "https://4xtvs.share.hsforms.com/2hyW-3iFlRV6YlheQMj0tNA",
+  },
+  {
+    slug: "AWS-2026",
+    title: "Workshop with AWS",
+    date: "December 8, 2026 · 17:00-20:30",
+    isoDate: "2026-12-08T17:00:00+01:00",
+    location: "Munich Center (tba)",
+    type: "Career",
+    description: "Explore cloud computing and agentic AI in a hands-on workshop with AWS SGB. Put what you’ve learned into practice in a team challenge!",
+    summary: "Join Women in CS @ TUM and AWS SGB for a guided workshop on cloud computing and agentic AI. You’ll work through practical exercises with a trainer and team up with other participants for a closing challenge (and possibly win a prize!). The workshop is designed for bachelor’s and master’s students with a technical foundation. Students of all genders are welcome, and women are especially encouraged to apply. There are 25 places available!",
+    signupNote: "More information coming soon",
+  },
+  // ===== Past =====
   {
     slug: "info-night-WS2026/27",
     title: "Info Night - Get to know us!",
@@ -156,21 +201,19 @@ export const events: EventItem[] = [
     location: "StudiTUM Garching, Room: 5532.EG.002",
     type: "Social",
     description: "Meet our team, enjoy games, tea and hot chocolate, and connect with other women in your field.",
-    summary: "Join Women in CS @ TUM for a cozy Info Night! Meet our team, enjoy games, tea and hot chocolate, and connect with other women in computer science. Come hang out and get to know our community! Sign up above ⬆",
-    signupLink: "https://luma.com/sysa4t7j",
+    summary: "Join Women in CS @ TUM for a cozy Info Night! Meet our team, enjoy games, tea and hot chocolate, and connect with other women in computer science. Come hang out and get to know our community!",
   },
   {
     slug: "ITCS-2026",
     title: "ITCS Job Fair",
     date: "October 30, 2026 · 9:30-16:00",
-    isoDate: "2026-10-30T9:30:00",
+    isoDate: "2026-10-30T09:30:00+01:00",
     location: "MOC Event Center, Halle 3, Lilienthalallee 40, 80939 München",
     type: "Career",
     description: "Connect with tech companies and discover new career paths at the ITCS Job Fair!",
     summary: "Join us at the ITCS Job Fair! Explore exciting career opportunities in tech, meet potential employers, discover internships and job openings, and connect with professionals from the industry. A great chance to network and take the next step in your career!",
     signupNote: "More information coming soon",
   },
-  // ===== Past =====
     {
     slug: "support-tum-cs-schnupperstudium-2026",
     title: "CS Schnupperstudium for High School Girls",

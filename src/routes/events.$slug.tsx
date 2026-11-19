@@ -81,6 +81,10 @@ export const Route = createFileRoute("/events/$slug")({
           </p>
           <Link
             to="/events"
+            search={{
+              time: undefined,
+              types: [],
+            }}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-2.5 font-medium"
           >
             All events
@@ -230,7 +234,7 @@ function EventDetailPage() {
             </a>
           )}
 
-          {!isPast && event.signupNote && !event.signupLink && (
+          {/* {!isPast && event.signupNote && !event.signupLink && (
             <TumAuthDialog
               trigger={
                 <button
@@ -241,7 +245,7 @@ function EventDetailPage() {
                 </button>
               }
             />
-          )}
+          )} */}
         </div>
 
         {event.summary && (
