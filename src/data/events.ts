@@ -1,3 +1,4 @@
+import awsLogo from "@/assets/partners/aws.svg";
 import optiverLogo from "@/assets/partners/optiver.svg";
 import netlightLogo from "@/assets/partners/netlight.svg";
 import guardsquareLogo from "@/assets/partners/guardsquare.png";
@@ -119,6 +120,7 @@ export interface EventItem {
   signupNote?: string; // e.g. "More information & signup coming soon."
   gallery?: string[]; // image URLs for the detail page
   partners?: EventPartner[];
+  cardLogo?: { src: string; alt: string; size?: "large" };
   signupLink?: string;
 }
 
@@ -166,6 +168,7 @@ export const events: EventItem[] = [
     isoDate: "2026-12-02T10:00:00+01:00",
     location: "Hotel at Gallileo",
     type: "Career",
+    cardLogo: { src: optiverLogo, alt: "Optiver" },
     description: "Get personalised CV feedback, explore career opportunities at Optiver, and ask your questions in a 20-minute coffee chat with a recruiter.",
     summary: "What could your next career move look like? Sit down one-on-one with an Optiver recruiter to explore internships and roles in software engineering, quantitative research, and trading. Bring your CV for feedback, ask about the application process, or find out what it’s like to work at Optiver. You set the agenda for your 20-minute conversation. Open to all genders and fields of study. Register here for one of the limited places!",
     signupLink: "https://4xtvs.share.hsforms.com/2KGo5OCczSb-KfKuUW7segA",
@@ -177,6 +180,7 @@ export const events: EventItem[] = [
     isoDate: "2026-12-02T18:00:00+01:00",
     location: "Campus Garching (tba)",
     type: "Career",
+    cardLogo: { src: optiverLogo, alt: "Optiver" },
     description: "Prepare for your next technical interview with tips from an Optiver developer and connect over pizza and drinks.",
     summary: "Get practical advice for tackling technical interviews directly from an Optiver developer. Learn how to approach your preparation, bring your questions, and explore career opportunities with the Optiver team. Afterwards, keep the conversation going over pizza and drinks while connecting with recruiters, a developer, and fellow students. Open to all genders and fields of study. Register here for one of 50 places!",
     signupLink: "https://4xtvs.share.hsforms.com/2hyW-3iFlRV6YlheQMj0tNA",
@@ -188,6 +192,7 @@ export const events: EventItem[] = [
     isoDate: "2026-12-08T17:00:00+01:00",
     location: "Munich Center (tba)",
     type: "Career",
+    cardLogo: { src: awsLogo, alt: "AWS", size: "large" },
     description: "Explore cloud computing and agentic AI in a hands-on workshop with AWS SGB. Put what you’ve learned into practice in a team challenge!",
     summary: "Join Women in CS @ TUM and AWS SGB for a guided workshop on cloud computing and agentic AI. You’ll work through practical exercises with a trainer and team up with other participants for a closing challenge (and possibly win a prize!). The workshop is designed for bachelor’s and master’s students with a technical foundation. Students of all genders are welcome, and women are especially encouraged to apply. There are 25 places available!",
     signupNote: "More information coming soon",
