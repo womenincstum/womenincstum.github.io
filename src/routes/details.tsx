@@ -169,7 +169,7 @@ function Details() {
           Meet the <span className="text-brand-gradient">board</span>
         </h2>
         <p className="mt-3 text-muted-foreground max-w-2xl">
-          Four students leading Women in CS @ TUM — keeping the club running, growing our reach,
+          Five students leading Women in CS @ TUM — keeping the club running, growing our reach,
           and bringing our community's ideas to life.
         </p>
        <div className="mt-10 flex flex-wrap lg:flex-nowrap justify-center gap-5">
