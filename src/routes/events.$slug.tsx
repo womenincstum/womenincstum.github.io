@@ -146,10 +146,10 @@ function EventDetailPage() {
       </div>
 
       <article className="mx-auto w-full max-w-6xl px-5 py-8 lg:py-12 flex-1">
-        <div className="relative">
+        <div className="flex items-start gap-4">
           {event.partners && event.partners.length > 0 && (
             <div
-              className={`absolute right-0 top-0 flex gap-3 ${
+              className={`order-last flex shrink-0 gap-3 ${
                 event.partners.length > 1
                   ? "flex-col items-end"
                   : "items-center"
@@ -160,7 +160,7 @@ function EventDetailPage() {
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="h-14 sm:h-16 max-w-[160px] object-contain"
+                    className="h-10 w-auto max-w-24 object-contain sm:h-16 sm:max-w-40"
                   />
                 );
                 return partner.website ? (
@@ -188,7 +188,7 @@ function EventDetailPage() {
             </div>
           )}
 
-          <div className="pr-0 sm:pr-40">
+          <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 text-xs font-medium text-primary glass rounded-full px-2.5 py-1">
                 <Tag size={12} /> {event.type}

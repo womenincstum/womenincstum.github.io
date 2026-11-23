@@ -1,6 +1,7 @@
 import { createFileRoute, Link, Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
+import { EventCardTag } from "@/components/EventCardTag";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { events, eventTypes, type EventType } from "@/data/events";
@@ -191,16 +192,7 @@ function EventsIndex() {
                     isPast ? "opacity-80" : ""
                   }`}
                 >
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium text-primary glass rounded-full px-2.5 py-1">
-                      {e.type}
-                    </span>
-                    {isPast && (
-                      <span className="text-xs font-medium text-muted-foreground rounded-full px-2.5 py-1 border border-border">
-                        Past
-                      </span>
-                    )}
-                  </div>
+                  <EventCardTag event={e} isPast={isPast} />
                   <h3 className="mt-4 text-lg font-semibold leading-snug group-hover:text-brand-gradient">
                     {e.title}
                   </h3>

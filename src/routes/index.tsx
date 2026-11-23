@@ -3,6 +3,7 @@ import { ArrowRight, Calendar, MapPin, Handshake, Users, Star, Sparkles, Message
 import heroImg1200 from "@/assets/hero-team-1200.webp";
 import heroImg800 from "@/assets/hero-team-800.webp";
 import optiverLogo from "@/assets/partners/optiver.svg";
+import { EventCardTag } from "@/components/EventCardTag";
 import { SiteHeader } from "@/components/SiteHeader";
 import { AnimatedHeadline } from "@/components/AnimatedHeadline";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -110,9 +111,7 @@ function Landing() {
               }}
               className="group glass rounded-2xl p-6 hover:border-primary/50 transition flex flex-col"
             >
-              <span className="self-start text-xs font-medium text-primary glass rounded-full px-2.5 py-1">
-                {e.type}
-              </span>
+              <EventCardTag event={e} />
               <h3 className="mt-4 text-lg font-semibold leading-snug group-hover:text-brand-gradient">
                 {e.title}
               </h3>
@@ -149,14 +148,11 @@ function Landing() {
             </h2>
             <p className="mt-1 text-muted-foreground">
               Work on your coding skills in hands-on workshops, hear from women engineers, and
-              connect with peers. Optiver covers travel and accommodation. Apply now!
+              connect with peers. Optiver covers travel and accommodation. Apply until the 10th of January 2027!
             </p>
             <p className="mt-2 text-sm text-muted-foreground">12–16 April 2027 · Amsterdam</p>
           </div>
           <div className="flex shrink-0 flex-col items-start gap-2">
-            <p className="text-sm font-semibold">
-              Open until <time dateTime="2027-01-10">10 January 2027</time>
-            </p>
             <a
               href="https://www.optiver.com/join-us/jobs/technology/amsterdam/career-kickstarter-women-in-tech-2027/apply"
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-5 py-3 font-semibold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
